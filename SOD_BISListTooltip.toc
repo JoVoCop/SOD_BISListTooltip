@@ -1,0 +1,10 @@
+## Interface: 11500
+## Version: 0.0.1
+## Title: SOD BIS List Tooltip
+## Notes: BIS List Tooltip for SoD
+## Author: Jovo
+## SavedVariables: SOD_BisListTooltipDB
+
+SOD_BisListTooltip.lua
+Options.lua
+WowheadLootTable.lua
