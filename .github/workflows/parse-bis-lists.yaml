@@ -29,6 +29,9 @@ jobs:
           chmod +x tools/install-chrome.sh
           ./tools/install-chrome.sh
       
+      - name: List directory contents recursively
+        run: ls -R
+      
       - name: Run parse-wowhead.py
         run: python tools/parse-wowhead.py
 
