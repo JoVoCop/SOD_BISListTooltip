@@ -26,11 +26,17 @@ jobs:
       
       - name: Run tools/install-chrome.sh
         run: |
+          pwd
+          cd tools/
           chmod +x tools/install-chrome.sh
           ./tools/install-chrome.sh
+          cd ..
       
       - name: List directory contents recursively
-        run: ls -R
+        run: |
+          ls -R
+          env
+          pwd
       
       - name: Run parse-wowhead.py
         run: python tools/parse-wowhead.py
