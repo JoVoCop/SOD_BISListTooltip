@@ -54,7 +54,13 @@ jobs:
         id: generate_changelog
         run: |
           python tools/generate-changelog.py
-          echo "changelog=$(cat changelog.md.tmp)" >> $GITHUB_OUTPUT
+
+          # Multi-line output
+          delimiter="$(openssl rand -hex 8)"
+          echo "changelog<<${delimiter}" >> "${GITHUB_OUTPUT}"
+          cat changelog.md.tmp >> "${GITHUB_OUTPUT}"
+          echo "${delimiter}" >> "${GITHUB_OUTPUT}"
+
       
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
