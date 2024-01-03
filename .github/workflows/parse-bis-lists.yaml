@@ -32,33 +32,29 @@ jobs:
           ./install-chrome.sh
           cd ..
       
-      - name: List directory contents recursively
-        run: |
-          ls -R
-          env
-          pwd
-      
       - name: Run parse-wowhead.py
         run: python tools/parse-wowhead.py
 
-      # - name: Check for changes
-      #   id: check_changes
-      #   run: |
-      #     git diff --quiet || echo "::set-output name=changed::true"
-      # 
-      # - name: Exit if no changes
-      #   if: steps.check_changes.outputs.changed != 'true'
-      #   run: exit 0
-      # 
-      # - name: Generate loot table
-      #   run: python tools/generate-loot-table.py
-      # 
-      # - name: Create pull request
-      #   uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     add-paths: 'data/wowhead.json,WowHeadLootTable.lua'
-      #     commit-message: Update wowhead BIS lists
-      #     title: Update Wowhead BIS lists
-      #     body: Update Wowhead BIS lists
-      #     branch: update-wowhead-bis-lists
-      #     delete-branch: true
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet || echo "::set-output name=changed::true"
+      
+      - name: Exit if no changes
+        if: steps.check_changes.outputs.changed != 'true'
+        run: |
+          echo "No changes detected, exiting"
+          exit 0
+      
+      - name: Generate loot table
+        run: python tools/generate-loot-table.py
+      
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          add-paths: 'data/wowhead.json,WowHeadLootTable.lua'
+          commit-message: Update wowhead BIS lists
+          title: Update Wowhead BIS lists
+          body: Update Wowhead BIS lists
+          branch: update-wowhead-bis-lists
+          delete-branch: true
