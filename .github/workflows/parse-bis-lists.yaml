@@ -50,7 +50,7 @@ jobs:
         run: python tools/generate-loot-table.py
       
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           add-paths: 'data/wowhead.json,WowheadLootTable.lua'
           commit-message: Update wowhead BIS lists
