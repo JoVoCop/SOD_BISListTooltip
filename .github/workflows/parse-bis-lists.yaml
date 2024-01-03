@@ -52,7 +52,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
-          add-paths: 'data/wowhead.json,WowHeadLootTable.lua'
+          add-paths: 'data/wowhead.json,WownheadLootTable.lua'
           commit-message: Update wowhead BIS lists
           title: Update Wowhead BIS lists
           body: Update Wowhead BIS lists
