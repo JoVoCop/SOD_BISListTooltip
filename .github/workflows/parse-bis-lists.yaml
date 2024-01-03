@@ -31,10 +31,11 @@ jobs:
           ./install-chrome.sh
           cd ..
       
-      - name: Run parse-wowhead.py
-        run: |
-          cp data/wowhead.json data/wowhead.json.old
-          python tools/parse-wowhead.py
+      # Temp disable to test future steps
+      # - name: Run parse-wowhead.py
+      #   run: |
+      #     cp data/wowhead.json data/wowhead.json.old
+      #     python tools/parse-wowhead.py
 
       - name: Check for changes
         id: check_changes

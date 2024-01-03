@@ -72,13 +72,16 @@ def main():
         for item_added in differences["iterable_item_added"]:
             item_name = item_added.t2["ItemName"]
             item_id = item_added.t2["ItemID"]
+            item_priority_text = item_added.t2["PriorityText"]
             page = item_added.up.up.t2["list"]
             item_key = f"{item_name} (ItemID: {item_id})"
 
+            summary = f"{page} - Priority: {item_priority_text}"
+
             if item_key in added_items:
-                added_items[item_key].append(page)
+                added_items[item_key].append(summary)
             else:
-                added_items[item_key] = [page]
+                added_items[item_key] = [summary]
 
     # Get removed items if they exist
     if "iterable_item_removed" in differences:
