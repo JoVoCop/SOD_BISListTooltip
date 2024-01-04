@@ -41,7 +41,7 @@ jobs:
         run: |
           # Check if wowhead.json has changed
           echo "Checking for changes in wowhead.json"
-          diff_output=$(diff data/wowhead.json data/wowhead.json.old)
+          diff_output=$(diff data/wowhead.json data/wowhead.json.old || true)
 
           # Check if the diff_output variable is empty
           if [ -z "$diff_output" ]
