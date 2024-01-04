@@ -4,8 +4,8 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   # Trigger daily at 00:00 UTC
-  #schedule:
-  #  - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
