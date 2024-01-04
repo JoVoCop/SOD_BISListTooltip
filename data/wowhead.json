@@ -4057,7 +4057,7 @@
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Phoenix Ignition",
-                    "ItemID": "20967444",
+                    "ItemID": "209674",
                     "Source": "Twilight Lord Kelris (Blackfathom Deeps)"
                 },
                 {
@@ -4685,7 +4685,7 @@
                     "PriorityNumber": 3,
                     "Phase": "1",
                     "ItemName": "Phoenix Ignition",
-                    "ItemID": "20967444",
+                    "ItemID": "209674",
                     "Source": "Twilight Lord Kelris (Blackfathom Deeps)"
                 },
                 {
@@ -7386,7 +7386,7 @@
                     "PriorityNumber": 2,
                     "Phase": "1",
                     "ItemName": "Phoenix Ignition",
-                    "ItemID": "20967444",
+                    "ItemID": "209674",
                     "Source": "Dropped by Twilight Lord Kelris (Blackfathom Deeps)"
                 },
                 {
@@ -8383,7 +8383,7 @@
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Phoenix Ignition",
-                    "ItemID": "20967444",
+                    "ItemID": "209674",
                     "Source": "Drops from Twilight Lord Kelris (Blackfathom Deeps)"
                 },
                 {
@@ -13274,7 +13274,7 @@
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Phoenix Ignition",
-                    "ItemID": "20967444",
+                    "ItemID": "209674",
                     "Source": "Twilight Lord Kelris\nBlackfathom Deeps"
                 },
                 {
@@ -14757,7 +14757,7 @@
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Phoenix Ignition",
-                    "ItemID": "20967444",
+                    "ItemID": "209674",
                     "Source": "Twilight Lord Kelris\nBlackfathom Deeps"
                 },
                 {
@@ -15210,7 +15210,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Honed Darkwater Talwar",
@@ -15219,17 +15219,26 @@
                 },
                 {
                     "Rank": "Best (Off Hand)",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
                     "Phase": "1",
-                    "ItemName": "Chipped Bite of Serra'kis",
-                    "ItemID": "209436",
-                    "Source": "Drops from Ghamoo-ra (Blackfathom Deeps)"
+                    "ItemName": "Blackfathom Ritual Dagger",
+                    "ItemID": "209694",
+                    "Source": "Drops from Twilight Lord Kelris (Blackfathom Deeps)"
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/5",
                     "PriorityNumber": 3,
+                    "Phase": "1",
+                    "ItemName": "Outlaw Sabre",
+                    "ItemID": "16886",
+                    "Source": "Strange Water Globe (Blackfathom Deeps)"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/5",
+                    "PriorityNumber": 4,
                     "Phase": "1",
                     "ItemName": "Butcher's Cleaver",
                     "ItemID": "1292",
@@ -15237,8 +15246,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
                     "Phase": "1",
                     "ItemName": "Cruel Barb",
                     "ItemID": "5191",
