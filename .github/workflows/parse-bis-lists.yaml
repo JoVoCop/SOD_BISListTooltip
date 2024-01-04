@@ -65,40 +65,40 @@ jobs:
         if: steps.check_changes.outputs.changed != 'false'
         run: python tools/generate-loot-table.py
 
-      - name: Generate next tag
-        id: gen_tag
-        if: steps.check_changes.outputs.changed != 'false'
-        uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
-          WITH_V: false
-          DRY_RUN: true # Allows for capturing the proposed tag (new_tag output)
-
-      - name: Generate changelog
-        id: generate_changelog
-        if: steps.check_changes.outputs.changed != 'false'
-        run: |
-          python tools/generate-changelog.py
-
-          # Multi-line output
-          changelogoutput=$(cat changelog.md.tmp)
-          echo "Changelog: $changelogoutput"
-          echo "Writing to GitHub output"
-
-          # Write changelog to GitHub output
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "changelog<<$EOF" >> $GITHUB_OUTPUT
-          echo "$changelogoutput" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
-
-          # Write changelog to changelog-latest.md
-          cp changelog.md.tmp changelog-latest.md
-
-      - name: Bump toc version
-        if: steps.check_changes.outputs.changed != 'false'
-        run: |
-          # Use sed to modify the '## Version: 0.0.1' line in SOD_BISListTooltip.toc to instead be '## Version: ${{ steps.gen_tag.outputs.new_tag }}'
-          sed -i "s/## Version: .*/## Version: ${{ steps.gen_tag.outputs.new_tag }}/g" SOD_BISListTooltip.toc
+      # - name: Generate next tag
+      #   id: gen_tag
+      #   if: steps.check_changes.outputs.changed != 'false'
+      #   uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+      #     WITH_V: false
+      #     DRY_RUN: true # Allows for capturing the proposed tag (new_tag output)
+      # 
+      # - name: Generate changelog
+      #   id: generate_changelog
+      #   if: steps.check_changes.outputs.changed != 'false'
+      #   run: |
+      #     python tools/generate-changelog.py
+      # 
+      #     # Multi-line output
+      #     changelogoutput=$(cat changelog.md.tmp)
+      #     echo "Changelog: $changelogoutput"
+      #     echo "Writing to GitHub output"
+      # 
+      #     # Write changelog to GitHub output
+      #     EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+      #     echo "changelog<<$EOF" >> $GITHUB_OUTPUT
+      #     echo "$changelogoutput" >> $GITHUB_OUTPUT
+      #     echo "$EOF" >> $GITHUB_OUTPUT
+      # 
+      #     # Write changelog to changelog-latest.md
+      #     cp changelog.md.tmp changelog-latest.md
+      # 
+      # - name: Bump toc version
+      #   if: steps.check_changes.outputs.changed != 'false'
+      #   run: |
+      #     # Use sed to modify the '## Version: 0.0.1' line in SOD_BISListTooltip.toc to instead be '## Version: ${{ steps.gen_tag.outputs.new_tag }}'
+      #     sed -i "s/## Version: .*/## Version: ${{ steps.gen_tag.outputs.new_tag }}/g" SOD_BISListTooltip.toc
       
       - name: Create pull request
         if: steps.check_changes.outputs.changed != 'false'
