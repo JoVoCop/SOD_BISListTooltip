@@ -4,15 +4,15 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   # Trigger daily at 00:00 UTC
-  #schedule:
-  #  - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content
+        uses: actions/checkout@v4
 
       - name: setup python
         uses: actions/setup-python@v4
@@ -26,30 +26,53 @@ jobs:
       
       - name: Run tools/install-chrome.sh
         run: |
-          chmod +x tools/install-chrome.sh
-          ./tools/install-chrome.sh
+          pwd
+          cd tools/
+          ./install-chrome.sh
+          cd ..
       
       - name: Run parse-wowhead.py
-        run: python tools/parse-wowhead.py
+        run: |
+          cp data/wowhead.json data/wowhead.json.old
+          python tools/parse-wowhead.py
 
-      # - name: Check for changes
-      #   id: check_changes
-      #   run: |
-      #     git diff --quiet || echo "::set-output name=changed::true"
-      # 
-      # - name: Exit if no changes
-      #   if: steps.check_changes.outputs.changed != 'true'
-      #   run: exit 0
-      # 
-      # - name: Generate loot table
-      #   run: python tools/generate-loot-table.py
-      # 
-      # - name: Create pull request
-      #   uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     add-paths: 'data/wowhead.json,WowHeadLootTable.lua'
-      #     commit-message: Update wowhead BIS lists
-      #     title: Update Wowhead BIS lists
-      #     body: Update Wowhead BIS lists
-      #     branch: update-wowhead-bis-lists
-      #     delete-branch: true
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Exit if no changes
+        if: steps.check_changes.outputs.changed != 'true'
+        run: |
+          echo "No changes detected, exiting"
+          exit 0
+      
+      - name: Generate loot table
+        run: python tools/generate-loot-table.py
+
+      - name: Generate changelog
+        id: generate_changelog
+        run: |
+          python tools/generate-changelog.py
+
+          # Multi-line output
+          changelogoutput=$(cat changelog.md.tmp)
+          echo "Changelog: $changelogoutput"
+          echo "Writing to GitHub output"
+
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "changelog<<$EOF" >> $GITHUB_OUTPUT
+          echo "$changelogoutput" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+      
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          add-paths: 'data/wowhead.json,WowheadLootTable.lua'
+          commit-message: Update BIS lists
+          title: Update BIS lists
+          body: |
+            ${{ steps.generate_changelog.outputs.changelog }}
+          branch: update-bis-lists
+          delete-branch: true

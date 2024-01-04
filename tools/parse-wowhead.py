@@ -494,7 +494,7 @@ def main():
         "items": items,
         "pages": pages
     }
-    logger.debug(json.dumps(output, indent=4))
+    # logger.debug(json.dumps(output, indent=4))
 
     # Write to file
     logger.info(f"Writing to {OUTPUT_PATH}")

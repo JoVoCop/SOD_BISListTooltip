@@ -44,3 +44,7 @@ venv/
 
 # Chrome
 tools/chrome/
+
+# Old files for diffing
+*.old
+*.tmp
