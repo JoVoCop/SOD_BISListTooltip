@@ -41,13 +41,19 @@ jobs:
         run: |
           # Check if wowhead.json has changed
           echo "Checking for changes in wowhead.json"
-          diff data/wowhead.json data/wowhead.json.old
-          echo "Git status"
-          git status
-          echo "Git diff"
-          git diff
-          echo "Git diff --quiet"
-          git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
+          diff_output=$(diff data/wowhead.json data/wowhead.json.old)
+
+          # Check if the diff_output variable is empty
+          if [ -z "$diff_output" ]
+          then
+              # If it is empty, the files are identical
+              echo "No changes detected"
+              echo "changed=false" >> $GITHUB_OUTPUT
+          else
+              # If it is not empty, the files are different
+              echo "There are pending changes to wowhead.json"
+              echo "changed=true" >> $GITHUB_OUTPUT
+          fi
       
       - name: Exit if no changes
         if: steps.check_changes.outputs.changed != 'true'
