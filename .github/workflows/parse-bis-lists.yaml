@@ -81,19 +81,19 @@ jobs:
         run: |
           # Use sed to modify the '## Version: 0.0.1' line in SOD_BISListTooltip.toc to instead be '## Version: ${{ steps.gen_tag.outputs.new_tag }}'
           sed -i "s/## Version: .*/## Version: ${{ steps.gen_tag.outputs.new_tag }}/g" SOD_BISListTooltip.toc
-        
-        - name: Create pull request
-          uses: peter-evans/create-pull-request@v5
-          with:
-            add-paths: 'data/wowhead.json,WowheadLootTable.lua,SOD_BISListTooltip.toc,changelogs/*.md'
-            commit-message: Update BIS lists
-            title: Update BIS lists
-            body: |
-              ${{ steps.generate_changelog.outputs.changelog }}
-            branch: update-bis-lists
-            reviewers: JoVoCop
-            delete-branch: true
+      
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          add-paths: 'data/wowhead.json,WowheadLootTable.lua,SOD_BISListTooltip.toc,changelogs/*.md'
+          commit-message: Update BIS lists
+          title: Update BIS lists
+          body: |
+            ${{ steps.generate_changelog.outputs.changelog }}
+          branch: update-bis-lists
+          reviewers: JoVoCop
+          delete-branch: true
 
-        # Automatically merge pull request - Disabled until we gain confidence
-        # - name: Auto merge pull request
-        #   run: gh pr merge --merge --auto "${{ steps.generate_changelog.outputs.pull-request-number }}"
+      # Automatically merge pull request - Disabled until we gain confidence
+      # - name: Auto merge pull request
+      #   run: gh pr merge --merge --auto "${{ steps.generate_changelog.outputs.pull-request-number }}"
