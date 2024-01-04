@@ -72,6 +72,6 @@ jobs:
           commit-message: Update BIS lists
           title: Update BIS lists
           body: |
-            ${{ steps.generate_changelo.outputs.changelog }}
+            ${{ steps.generate_changelog.outputs.changelog }}
           branch: update-bis-lists
           delete-branch: true
