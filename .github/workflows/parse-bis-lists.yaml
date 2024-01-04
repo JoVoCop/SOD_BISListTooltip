@@ -59,10 +59,14 @@ jobs:
           python tools/generate-changelog.py
 
           # Multi-line output
-          delimiter="$(openssl rand -hex 8)"
-          echo "changelog<<${delimiter}" >> "${GITHUB_OUTPUT}"
-          cat changelog.md.tmp >> "${GITHUB_OUTPUT}"
-          echo "${delimiter}" >> "${GITHUB_OUTPUT}"
+          changelogoutput=$(cat changelog.md.tmp)
+          echo "Changelog: $changelogoutput"
+          echo "Writing to GitHub output"
+
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "changelog<<$EOF" >> $GITHUB_OUTPUT
+          echo "$changelogoutput" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
 
       
       - name: Create pull request
