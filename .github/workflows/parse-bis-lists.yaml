@@ -91,8 +91,8 @@ jobs:
           echo "$changelogoutput" >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
-          # Write changelog to changelogs/ directory
-          cp changelog.md.tmp changelogs/v${{ steps.gen_tag.outputs.new_tag }}.md
+          # Write changelog to changelog-latest.md
+          cp changelog.md.tmp changelog-latest.md
 
       - name: Bump toc version
         if: steps.check_changes.outputs.changed != 'false'
@@ -104,7 +104,7 @@ jobs:
         if: steps.check_changes.outputs.changed != 'false'
         uses: peter-evans/create-pull-request@v5
         with:
-          add-paths: 'data/wowhead.json,WowheadLootTable.lua,SOD_BISListTooltip.toc,changelogs/*.md'
+          add-paths: 'data/wowhead.json,WowheadLootTable.lua,SOD_BISListTooltip.toc,changelog-latest.md'
           commit-message: Update BIS lists
           title: Update BIS lists
           body: |
