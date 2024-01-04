@@ -109,6 +109,19 @@ def main():
             old_value = item_changed.t1
             new_value = item_changed.t2
 
+            # Convert changed_key from list to string
+            changed_key = "".join(changed_key)
+
+            if changed_key[:2] == "['":
+                changed_key = changed_key[2:] 
+            if changed_key[-2:] == "']":
+                changed_key = changed_key[:-2]
+            
+
+            # Ignore changes to PriorityText
+            if changed_key == "PriorityText":
+                continue
+
             # Summary in format "Page - Key: OldValue -> NewValue"
             summary = f"{old_page} - `{changed_key}: {old_value} -> {new_value}`"
 
