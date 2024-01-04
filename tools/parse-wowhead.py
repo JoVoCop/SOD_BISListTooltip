@@ -426,7 +426,7 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
         "warnings": warnings
     }
 
-@logger.catch
+@logger.catch(onerror=lambda _: sys.exit(1)) # Catch all exceptions and exit with code 1
 def main():
     # Read WOWHEAD_WARLOCK_DPS_BIS_URL
     # Parse each table that has a columns "Rank", "Item", and "Source"
