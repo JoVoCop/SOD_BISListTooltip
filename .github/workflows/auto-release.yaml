@@ -1,0 +1,42 @@
+name: Auto Release
+
+on:
+  # Allow manual trigger
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    permissions:
+      contents: write
+      
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create output build
+        run: |
+          # Create a new 'output' directory
+          mkdir -p output/SOD_BISListTooltip
+
+          # Copy the files we want to include in the release
+          cp -r *.lua *.toc output/SOD_BISListTooltip
+
+          # cd into the output directory
+          cd output
+          
+          # Zip the output directory
+          zip -r SOD_BISListTooltip-${{github.ref_name}}.zip SOD_BISListTooltip
+
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: >-
+        gh release create ${{ github.ref_name }}
+        "output/SOD_BISListTooltip-${{ github.ref_name }}.zip"
+        -F changelogs/${{ github.ref_name }}.md
+        --title "${{ github.ref_name }}"

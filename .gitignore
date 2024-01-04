@@ -48,3 +48,6 @@ tools/chrome/
 # Old files for diffing
 *.old
 *.tmp
+
+# Output
+output/

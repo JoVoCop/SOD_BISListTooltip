@@ -50,6 +50,14 @@ jobs:
       - name: Generate loot table
         run: python tools/generate-loot-table.py
 
+      - name: Generate next tag
+        id: gen_tag
+        uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+          WITH_V: false
+          DRY_RUN: true # Allows for capturing the proposed tag (new_tag output)
+
       - name: Generate changelog
         id: generate_changelog
         run: |
@@ -60,19 +68,32 @@ jobs:
           echo "Changelog: $changelogoutput"
           echo "Writing to GitHub output"
 
+          # Write changelog to GitHub output
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
           echo "changelog<<$EOF" >> $GITHUB_OUTPUT
           echo "$changelogoutput" >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
+          # Write changelog to changelogs/ directory
+          cp changelog.md.tmp changelogs/v${{ steps.gen_tag.outputs.new_tag }}.md
+
+    - name: Bump toc version
+      run: |
+        # Use sed to modify the '## Version: 0.0.1' line in SOD_BISListTooltip.toc to instead be '## Version: ${{ steps.gen_tag.outputs.new_tag }}'
+        sed -i "s/## Version: .*/## Version: ${{ steps.gen_tag.outputs.new_tag }}/g" SOD_BISListTooltip.toc
       
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
-          add-paths: 'data/wowhead.json,WowheadLootTable.lua'
+          add-paths: 'data/wowhead.json,WowheadLootTable.lua,SOD_BISListTooltip.toc,changelogs/*.md'
           commit-message: Update BIS lists
           title: Update BIS lists
           body: |
             ${{ steps.generate_changelog.outputs.changelog }}
           branch: update-bis-lists
+          reviewers: JoVoCop
           delete-branch: true
+
+      # Automatically merge pull request - Disabled until we gain confidence
+      # - name: Auto merge pull request
+      #   run: gh pr merge --merge --auto "${{ steps.generate_changelog.outputs.pull-request-number }}"
