@@ -62,12 +62,12 @@ jobs:
           exit 0
       
       - name: Generate loot table
-        if: steps.check_changes.outputs.changed != 'true'
+        if: steps.check_changes.outputs.changed != 'false'
         run: python tools/generate-loot-table.py
 
       - name: Generate next tag
         id: gen_tag
-        if: steps.check_changes.outputs.changed != 'true'
+        if: steps.check_changes.outputs.changed != 'false'
         uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
@@ -76,7 +76,7 @@ jobs:
 
       - name: Generate changelog
         id: generate_changelog
-        if: steps.check_changes.outputs.changed != 'true'
+        if: steps.check_changes.outputs.changed != 'false'
         run: |
           python tools/generate-changelog.py
 
@@ -95,13 +95,13 @@ jobs:
           cp changelog.md.tmp changelogs/v${{ steps.gen_tag.outputs.new_tag }}.md
 
       - name: Bump toc version
-        if: steps.check_changes.outputs.changed != 'true'
+        if: steps.check_changes.outputs.changed != 'false'
         run: |
           # Use sed to modify the '## Version: 0.0.1' line in SOD_BISListTooltip.toc to instead be '## Version: ${{ steps.gen_tag.outputs.new_tag }}'
           sed -i "s/## Version: .*/## Version: ${{ steps.gen_tag.outputs.new_tag }}/g" SOD_BISListTooltip.toc
       
       - name: Create pull request
-        if: steps.check_changes.outputs.changed != 'true'
+        if: steps.check_changes.outputs.changed != 'false'
         uses: peter-evans/create-pull-request@v5
         with:
           add-paths: 'data/wowhead.json,WowheadLootTable.lua,SOD_BISListTooltip.toc,changelogs/*.md'
