@@ -74,9 +74,9 @@ def main():
             item_id = item_added.t2["ItemID"]
             item_priority_text = item_added.t2["PriorityText"]
             page = item_added.up.up.t2["list"]
-            item_key = f"{item_name} (ItemID: {item_id})"
+            item_key = f"{item_name} (ItemID: `{item_id}`)"
 
-            summary = f"{page} - Priority: {item_priority_text}"
+            summary = f"{page} - Priority: `{item_priority_text}`"
 
             if item_key in added_items:
                 added_items[item_key].append(summary)
@@ -89,7 +89,7 @@ def main():
             item_name = item_removed.t1["ItemName"]
             item_id = item_removed.t1["ItemID"]
             page = item_removed.up.up.t1["list"]
-            item_key = f"{item_name} (ItemID: {item_id})"
+            item_key = f"{item_name} (ItemID: `{item_id}`)"
 
             if item_key in removed_items:
                 removed_items[item_key].append(page)
@@ -105,12 +105,12 @@ def main():
             old_page = item_changed.up.up.up.t1["list"]
             print(old_page)
             changed_key = item_changed.path(output_format="list")[-1:]
-            item_key = f"{old_item_name} (ItemID: {old_item_id})"
+            item_key = f"{old_item_name} (ItemID: `{old_item_id}`)"
             old_value = item_changed.t1
             new_value = item_changed.t2
 
             # Summary in format "Page - Key: OldValue -> NewValue"
-            summary = f"{old_page} - {changed_key}: {old_value} -> {new_value}"
+            summary = f"{old_page} - `{changed_key}: {old_value} -> {new_value}`"
 
             if item_key in changed_items:
                 changed_items[item_key].append(summary)
@@ -129,9 +129,10 @@ def main():
         if len(added_items) > 0:
             f.write("\n\n")
             f.write("### Additions\n\n")
-            for item_name, pages in added_items.items():
+            for item_name, additions in added_items.items():
                 f.write(f"* {item_name}\n")
-                f.write(f"  * Lists: {', '.join(pages)}\n")
+                for addition in additions:
+                    f.write(f"  * {addition}\n")
         
         # Removed items
         if len(removed_items) > 0:
