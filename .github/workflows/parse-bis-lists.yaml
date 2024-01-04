@@ -39,6 +39,14 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
+          # Check if wowhead.json has changed
+          echo "Checking for changes in wowhead.json"
+          diff data/wowhead.json data/wowhead.json.old
+          echo "Git status"
+          git status
+          echo "Git diff"
+          git diff
+          echo "Git diff --quiet"
           git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: Exit if no changes
