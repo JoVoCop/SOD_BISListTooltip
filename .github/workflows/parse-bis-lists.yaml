@@ -70,11 +70,12 @@ jobs:
         if: steps.check_changes.outputs.changed != 'false'
         run: |
           git_refs=$(git for-each-ref --sort=-v:refname --format '%(refname:lstrip=2)')
+          tagFmt="^v?[0-9]+\.[0-9]+\.[0-9]+$"
           matching_tag_refs=$( (grep -E "$tagFmt" <<< "$git_refs") || true)
           tag=$(head -n 1 <<< "$matching_tag_refs")
 
           echo "Latest tag: $tag"
-          new_tag=$(semver -i minor "$tag")
+          new_tag=$(python tools/bump-semver.py $tag)
           echo "New tag: $new_tag"
           echo "new_tag=$new_tag" >> $GITHUB_OUTPUT
 
