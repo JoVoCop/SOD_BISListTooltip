@@ -81,7 +81,8 @@ jobs:
           echo "new_tag=$new_tag" >> $GITHUB_OUTPUT
 
           # Strip the 'v' from the tag if it exists
-          new_tag_no_v=${tag#v}
+          new_tag_no_v=${new_tag#v}
+          echo "New tag (no v): $new_tag_no_v"
           echo "new_tag_no_v=$new_tag_no_v" >> $GITHUB_OUTPUT
 
 
