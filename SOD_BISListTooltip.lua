@@ -87,11 +87,19 @@ end
 -- param: itemName (string): name of the item
 -- param: key (string): "prio" or "note"
 -- return: value (string)
-function getValue(itemLink, itemName, key, lootTable)
+function getValue(itemLink, itemName, key, lootTable)    
+    -- Extract the itemid and itemsuffixid from the itemLink
+    -- See https://wowwiki-archive.fandom.com/wiki/ItemString
+    item_id = itemLink:match("item:(%d+):")
+    item_suffix_id = itemLink:match("item:%d+:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(%d*):") -- there has got to be a nicer way to do this
     for index, value in next, lootTable do
-        -- If itemid AND itemname match, return the value
-        -- We use itemname in addition to itemid because some items with random enchants have the same itemid but different names
-        if value["itemid"] == itemLink:match("item:(%d+):") and value["itemname"] == itemName then
+        -- Use itemid match only. I originally used itemid AND itemsuffixid, but this was causing issues with items that have random enchants
+        -- Issues:
+        --  * Wowhead lists sometimes contain the rand (suffixid) and sometimes don't
+        --  * The suffixid is not always the same as the one linked in wowhead. For example, https://www.wowhead.com/classic/item=6617/sages-mantle?rand=767 has the rand id of 767 but in game, these can range between 754 and 838
+        -- Reference: https://wowwiki-archive.fandom.com/wiki/SuffixId
+        -- May save a mapping of possible values in the future but for now, just use itemid as that still only solves #1. #2 would need to be solved by parsing the text of the cell in wowhead
+        if value["itemid"] == item_id then
             return value[key]
         end
     end
@@ -106,7 +114,9 @@ function injectTooltip(tooltip)
     local itemName, itemLink = tooltip:GetItem()
 
     if itemLink then
+        print("1")
         wowheadSections = getValue(itemLink, itemName, "sections", wowheadLootTable) -- Use wowheadLootTable for now, extend to other sources later
+        print("2")
 
         if BisListTooltipDB.datasouceWowhead == true and wowheadSections then
             -- We have at least one line to add
