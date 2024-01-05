@@ -176,6 +176,7 @@
         "Headhunter's Bands of the Monkey": "15351",
         "Naga Battle Gauntlets": "209527",
         "Scaled Leather Belt of the Bear": "9827",
+        "Cord of Aquanis": "209421",
         "Deviate Scale Belt": "6468",
         "Troll's Bane Leggings": "13114",
         "Harbinger Boots": "7754",
@@ -191,7 +192,6 @@
         "Forest Leather Bracers": "3202",
         "Pilferer's Gloves": "7358",
         "Toughened Leather Gloves": "4253",
-        "Cord of Aquanis": "209421",
         "Windborne Belt": "6719",
         "Dervish Leggings": "6607",
         "Bristlebark Britches": "14574",
@@ -2761,7 +2761,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/2",
+                    "PriorityText": "1/3",
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Scaled Leather Belt of the Bear",
@@ -2770,8 +2770,17 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/2",
+                    "PriorityText": "2/3",
                     "PriorityNumber": 2,
+                    "Phase": "1",
+                    "ItemName": "Cord of Aquanis",
+                    "ItemID": "209421",
+                    "Source": "Baron Aquanis (Blackfathom Deeps)"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/3",
+                    "PriorityNumber": 3,
                     "Phase": "1",
                     "ItemName": "Deviate Scale Belt",
                     "ItemID": "6468",
@@ -10558,7 +10567,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Bearded Boneaxe",
@@ -10567,7 +10576,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
                     "Phase": "1",
                     "ItemName": "Callous Axe",
@@ -10576,7 +10585,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
+                    "PriorityText": "3/4",
                     "PriorityNumber": 3,
                     "Phase": "1",
                     "ItemName": "Headsplitter",
@@ -10584,8 +10593,17 @@
                     "Source": "BoE World Drop (Open World or Auction House)"
                 },
                 {
+                    "Rank": "Good",
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
+                    "Phase": "1",
+                    "ItemName": "Beazel's Basher",
+                    "ItemID": "13024",
+                    "Source": "BoE World Drop (Open World or Auction House)"
+                },
+                {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/3",
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Axe of the Enforcer",
@@ -10594,7 +10612,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/3",
                     "PriorityNumber": 2,
                     "Phase": "1",
                     "ItemName": "Chipped Bite of Serra'kis",
@@ -10603,17 +10621,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/3",
                     "PriorityNumber": 3,
-                    "Phase": "1",
-                    "ItemName": "Beazel's Basher",
-                    "ItemID": "13024",
-                    "Source": "BoE World Drop (Open World or Auction House)"
-                },
-                {
-                    "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
                     "Phase": "1",
                     "ItemName": "Diamond Hammer",
                     "ItemID": "2194",
@@ -15210,7 +15219,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Honed Darkwater Talwar",
@@ -15219,17 +15228,26 @@
                 },
                 {
                     "Rank": "Best (Off Hand)",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
                     "Phase": "1",
-                    "ItemName": "Chipped Bite of Serra'kis",
-                    "ItemID": "209436",
-                    "Source": "Drops from Ghamoo-ra (Blackfathom Deeps)"
+                    "ItemName": "Blackfathom Ritual Dagger",
+                    "ItemID": "209694",
+                    "Source": "Drops from Twilight Lord Kelris (Blackfathom Deeps)"
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/5",
                     "PriorityNumber": 3,
+                    "Phase": "1",
+                    "ItemName": "Outlaw Sabre",
+                    "ItemID": "16886",
+                    "Source": "Strange Water Globe (Blackfathom Deeps)"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/5",
+                    "PriorityNumber": 4,
                     "Phase": "1",
                     "ItemName": "Butcher's Cleaver",
                     "ItemID": "1292",
@@ -15237,8 +15255,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
                     "Phase": "1",
                     "ItemName": "Cruel Barb",
                     "ItemID": "5191",
