@@ -114,9 +114,7 @@ function injectTooltip(tooltip)
     local itemName, itemLink = tooltip:GetItem()
 
     if itemLink then
-        print("1")
         wowheadSections = getValue(itemLink, itemName, "sections", wowheadLootTable) -- Use wowheadLootTable for now, extend to other sources later
-        print("2")
 
         if BisListTooltipDB.datasouceWowhead == true and wowheadSections then
             -- We have at least one line to add
