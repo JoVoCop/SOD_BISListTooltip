@@ -11,7 +11,9 @@ Currently sources BIS information from Wowhead. Additional sources to be added i
 * Meaningful changelogs. Changelogs indicate additions, removals, and changes.
 * Tooltip text matches the upstream source. For example, if your BIS list says something like 'Optional: Shadow', that will be displayed in the tooltip.
 
-NOTE: Some Wowhead BIS lists don't link to the proper enchant suffix (ex: "...of the Owl"). In these cases, the tooltip will not show correct information.
+### Known issues
+* Tooltip will display BIS items only based on itemid. Some items with a random enchant (ex: "...of the Owl") may show as a potential BIS even though it's not the proper random enchant for your class.
+    * Example: "Sage's Mantle of the Owl" is a BIS option for Priest Healers. The tooltip will show this correctly for Priest Healers but will also show for Warlock DPS as they want " Sage's Mantle of Shadow Wrath".
 
 ## Running
 
