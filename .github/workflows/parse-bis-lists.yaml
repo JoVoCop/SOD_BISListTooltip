@@ -70,8 +70,11 @@ jobs:
         # if: steps.check_changes.outputs.changed != 'false'
         run: |
           git_refs=$(git for-each-ref --sort=-v:refname --format '%(refname:lstrip=2)')
+          echo "git_refs=$git_refs"
           tagFmt="^v?[0-9]+\.[0-9]+\.[0-9]+$"
+          echo "tagFmt=$tagFmt"
           matching_tag_refs=$( (grep -E "$tagFmt" <<< "$git_refs") || true)
+          echo "matching_tag_refs=$matching_tag_refs"
           tag=$(head -n 1 <<< "$matching_tag_refs")
 
           echo "Latest tag: $tag"
