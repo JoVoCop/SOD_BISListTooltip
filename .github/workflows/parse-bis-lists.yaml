@@ -83,7 +83,6 @@ jobs:
           # Strip the 'v' from the tag if it exists
           new_tag_no_v=${tag#v}
           echo "new_tag_no_v=$new_tag_no_v" >> $GITHUB_OUTPUT
-          exit 1
 
 
       - name: Generate changelog
