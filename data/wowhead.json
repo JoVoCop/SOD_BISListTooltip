@@ -7902,7 +7902,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/7",
+                    "PriorityText": "1/8",
                     "PriorityNumber": 1,
                     "Phase": "1",
                     "ItemName": "Soul Leech Pants",
@@ -7911,7 +7911,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "2/7",
+                    "PriorityText": "2/8",
                     "PriorityNumber": 2,
                     "Phase": "1",
                     "ItemName": "Gaze Dreamer Leggings",
@@ -7920,8 +7920,17 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "3/7",
+                    "PriorityText": "3/8",
                     "PriorityNumber": 3,
+                    "Phase": "1",
+                    "ItemName": "Sacred Burial Trousers",
+                    "ItemID": "6282",
+                    "Source": "Battle of Hillsbrad (Hillsbrad Foothills)"
+                },
+                {
+                    "Rank": "Great",
+                    "PriorityText": "4/8",
+                    "PriorityNumber": 4,
                     "Phase": "1",
                     "ItemName": "Silver-thread Pants",
                     "ItemID": "4037",
@@ -7929,8 +7938,8 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "4/7",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/8",
+                    "PriorityNumber": 5,
                     "Phase": "1",
                     "ItemName": "Ivycloth Pants of the Owl",
                     "ItemID": "9797",
@@ -7938,8 +7947,8 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "5/7",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/8",
+                    "PriorityNumber": 6,
                     "Phase": "1",
                     "ItemName": "Darkweave Breeches",
                     "ItemID": "12987",
@@ -7947,8 +7956,8 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "6/7",
-                    "PriorityNumber": 6,
+                    "PriorityText": "7/8",
+                    "PriorityNumber": 7,
                     "Phase": "1",
                     "ItemName": "Night Watch Pantaloons",
                     "ItemID": "2954",
@@ -7956,8 +7965,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "7/7",
-                    "PriorityNumber": 7,
+                    "PriorityText": "8/8",
+                    "PriorityNumber": 8,
                     "Phase": "1",
                     "ItemName": "Heavy Woolen Pants",
                     "ItemID": "4316",
@@ -8204,7 +8213,7 @@
                     "Phase": "1",
                     "ItemName": "Rune of Perfection",
                     "ItemID": "21566",
-                    "Source": "Silverwing Sentinels - Honored\nWarsong Outriders - Honored (Illiyana Moonblaze\nKelm Hargunth)"
+                    "Source": "Silverwing Sentinels - Friendly\nWarsong Outriders - Friendly (Illiyana Moonblaze\nKelm Hargunth)"
                 },
                 {
                     "Rank": "Best",
