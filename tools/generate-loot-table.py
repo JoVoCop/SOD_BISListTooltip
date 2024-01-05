@@ -32,8 +32,9 @@ def main():
 
         # Iterate over each item in the list
         logger.info("Processing wowhead data")
-        for itemname, itemid in wowhead_data["items"].items():
-            logger.info(f"Processing item {itemid} - {itemname}")
+        for itemkey, itemname in wowhead_data["items"].items():
+            itemid, itemsuffixid = itemkey.split("|")
+            logger.info(f"Processing item {itemid} (SuffixID: {itemsuffixid}) - {itemname}")
 
 
             sectionsText = "{"
@@ -47,13 +48,14 @@ def main():
                 for item in page["contents"]:
                     data_item_name = item["ItemName"]
                     data_item_id = item["ItemID"]
+                    data_item_suffix_id = item["ItemSuffixID"]
                     data_item_rank = item["Rank"]
                     data_item_priority_text = item["PriorityText"]
                     data_item_priority_number = item["PriorityNumber"]
                     data_item_phase = item["Phase"]
                     data_item_source = item["Source"]
 
-                    if itemid == data_item_id:
+                    if itemid == data_item_id and itemsuffixid == data_item_suffix_id:
                         logger.info(f"Found a match in page {data_listname}")
                         # We have a match
                         sectionsText = sectionsText + "{{[\"list\"] = \"{data_listname}\", [\"rank\"] = \"{data_item_rank}\", [\"class\"] = \"{data_class}\", [\"spec\"] = \"{data_spec}\", [\"priority_text\"] = \"{data_item_priority_text}\", [\"priority_number\"] = \"{data_item_priority_number}\", [\"phase\"] = \"{data_item_phase}\", [\"datasource\"] = \"Wowhead\"}},".format(
@@ -68,9 +70,9 @@ def main():
 
             sectionsText = sectionsText + "}"
 
-            outputLine = "{{[\"itemid\"] = \"{itemid}\", [\"itemname\"] = \"{itemname}\", [\"sections\"] = {sections}}},\n".format(
+            outputLine = "{{[\"itemid\"] = \"{itemid}\", [\"itemsuffixid\"] = \"{itemsuffixid}\", [\"sections\"] = {sections}}},\n".format(
                 itemid=itemid,
-                itemname=itemname,
+                itemsuffixid=itemsuffixid,
                 sections=sectionsText
             )
             f.write(outputLine)    

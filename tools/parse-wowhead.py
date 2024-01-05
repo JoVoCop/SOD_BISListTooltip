@@ -9,6 +9,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+from retry import retry
+
 
 # Parses wowhead html and outputs a json file with the data. Should be updated to output a lua file instead later.
 
@@ -208,6 +211,11 @@ WOWHEAD_IMAGE_TO_SPEC = {
 # Output
 OUTPUT_PATH = os.path.join(CWD, "../data/wowhead.json")
 
+@retry(TimeoutException, tries=3)
+def get_with_retry(driver, url):
+    logger.debug(f"Getting {url}")
+    driver.get(url)
+
 def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -> dict:
     """
     Parses a wowhead url and returns a dictionary with the following:
@@ -222,7 +230,7 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
 
     # Get page
     logger.debug(f"Getting {url}")
-    browser.get(url)
+    get_with_retry(browser, url)
 
     # Get data within id=guide-body
     logger.debug("Getting guide-body")
@@ -237,7 +245,7 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
     data = []
     errors = []
     warnings = []
-    items = {} # Dictionary of item names to item ids. We use the name as the key as some items have random enchanments which use the same ID but have different names
+    items = {} # Dictionary of itemid|suffixid to name.
     logger.debug("Iterating over tables")
     for table in tables:
         # Find all rows in the table
@@ -314,7 +322,9 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
                                     row_data["Rank"] = "Best"
                                     row_data["ItemName"] = "Sentry's Shoulderguards"
                                     row_data["ItemID"] = "15531"
-                                    items["Sentry's Shoulderguards"] = "15531"
+                                    row_data["ItemSuffixID"] = ""
+                                    
+                                    items["15531|"] = "Sentry's Shoulderguards"
                                     row_data["PriorityText"] = f"{row_current}/{row_count}" # For example, 1/10
                                     row_data["PriorityNumber"] = row_current # For example, 1. Useful for ordering the items for presentation
                                     row_data["Phase"] = "1"
@@ -361,9 +371,15 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
                                 skip_row = True
                                 continue
 
-                            # If "&&rand=" followed by numbers is in the item_id, remove it
+                            # If "&&rand=" followed by numbers is in the item_id, save it as SuffixID
+                            rand_id = None
                             if "&&rand=" in item_id:
-                                item_id = item_id.split("&&rand=")[0]
+                                item_id, rand_id = item_id.split("&&rand=")
+                                # if rand_id contains &&, only take the first part
+                                if "&&" in rand_id:
+                                    rand_id = rand_id.split("&&")[0]
+                                logger.debug(f"Found rand_id {rand_id} for item {item_name} in {listname}")
+
                         else:
                             logger.warning(f"Did not find item link for {item_name} in {listname}")
                             warnings.append(f"Did not find item link for {item_name} in {listname}")
@@ -376,7 +392,11 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
 
                         row_data["ItemName"] = item_name
                         row_data["ItemID"] = item_id
-                        items[item_name] = item_id
+                        if rand_id is None:
+                            rand_id = ""
+                        row_data["ItemSuffixID"] = rand_id
+                        items_key = f"{item_id}|{rand_id}"
+                        items[items_key] = item_name
 
                         logger.info(f"Found item: {item_name} with id {item_id}")
                     elif column_name == "Source":
@@ -457,11 +477,12 @@ def main():
 
     # Choose Chrome Browser
     browser = webdriver.Chrome(service=webdriver_service, options=options)
+    browser.set_page_load_timeout(60)
     # Iterate over WOWHEAD_URLS
     pages = []
     errors = []
     warnings = []
-    items = {} # Dictionary of item ids to item names
+    items = {} # Dictionary of itemid|suffixid to item names
     for wowhead_url in WOWHEAD_URLS:
         logger.info(f"Processing {wowhead_url['list']} ({wowhead_url['url']})")
         
