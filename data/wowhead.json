@@ -2437,20 +2437,20 @@
                     "PriorityText": "4/5",
                     "PriorityNumber": 4,
                     "Phase": "1",
-                    "ItemName": "Rune of Perfection",
-                    "ItemID": "21566",
+                    "ItemName": "Shifting Scale Talisman",
+                    "ItemID": "211420",
                     "ItemSuffixID": "",
-                    "Source": "Silverwing Sentinels (Honored)\n Warsong Outriders (Honored) (Illiyana Moonblaze\n Kelm Hargunth)"
+                    "Source": "Shifting Scale Talisman (The Barrens)"
                 },
                 {
                     "Rank": "Good",
                     "PriorityText": "5/5",
                     "PriorityNumber": 5,
                     "Phase": "1",
-                    "ItemName": "Shifting Scale Talisman",
-                    "ItemID": "211420",
+                    "ItemName": "Rune of Perfection",
+                    "ItemID": "21566",
                     "ItemSuffixID": "",
-                    "Source": "Shifting Scale Talisman (The Barrens)"
+                    "Source": "Silverwing Sentinels (Honored)\n Warsong Outriders (Honored) (Illiyana Moonblaze\n Kelm Hargunth)"
                 },
                 {
                     "Rank": "Best",
