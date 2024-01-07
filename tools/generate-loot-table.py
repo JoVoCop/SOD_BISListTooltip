@@ -33,8 +33,8 @@ def main():
         # Iterate over each item in the list
         logger.info("Processing wowhead data")
         for itemkey, itemname in wowhead_data["items"].items():
-            itemid, itemsuffixid = itemkey.split("|")
-            logger.info(f"Processing item {itemid} (SuffixID: {itemsuffixid}) - {itemname}")
+            itemid, itemsuffixkey = itemkey.split("|")
+            logger.info(f"Processing item {itemid} (SuffixID: {itemsuffixkey}) - {itemname}")
 
 
             sectionsText = "{"
@@ -48,14 +48,14 @@ def main():
                 for item in page["contents"]:
                     data_item_name = item["ItemName"]
                     data_item_id = item["ItemID"]
-                    data_item_suffix_id = item["ItemSuffixID"]
+                    data_item_suffix_key = item["ItemSuffixKey"]
                     data_item_rank = item["Rank"]
                     data_item_priority_text = item["PriorityText"]
                     data_item_priority_number = item["PriorityNumber"]
                     data_item_phase = item["Phase"]
                     data_item_source = item["Source"]
 
-                    if itemid == data_item_id and itemsuffixid == data_item_suffix_id:
+                    if itemid == data_item_id and itemsuffixkey == data_item_suffix_key:
                         logger.info(f"Found a match in page {data_listname}")
                         # We have a match
                         sectionsText = sectionsText + "{{[\"list\"] = \"{data_listname}\", [\"rank\"] = \"{data_item_rank}\", [\"class\"] = \"{data_class}\", [\"spec\"] = \"{data_spec}\", [\"priority_text\"] = \"{data_item_priority_text}\", [\"priority_number\"] = \"{data_item_priority_number}\", [\"phase\"] = \"{data_item_phase}\", [\"datasource\"] = \"Wowhead\"}},".format(
@@ -70,9 +70,9 @@ def main():
 
             sectionsText = sectionsText + "}"
 
-            outputLine = "{{[\"itemid\"] = \"{itemid}\", [\"itemsuffixid\"] = \"{itemsuffixid}\", [\"sections\"] = {sections}}},\n".format(
+            outputLine = "{{[\"itemid\"] = \"{itemid}\", [\"itemsuffixkey\"] = \"{itemsuffixkey}\", [\"sections\"] = {sections}}},\n".format(
                 itemid=itemid,
-                itemsuffixid=itemsuffixid,
+                itemsuffixkey=itemsuffixkey,
                 sections=sectionsText
             )
             f.write(outputLine)    

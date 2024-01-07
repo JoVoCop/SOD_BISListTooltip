@@ -162,7 +162,7 @@ WOWHEAD_URLS = [
         "phase": "1",
         "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/tank-bis-gear-pve-phase-1"
     },
-    
+
     # Warlock
     {
         "class": "Warlock",
@@ -208,6 +208,10 @@ WOWHEAD_IMAGE_TO_SPEC = {
 
 }
 
+# Mapping file for english suffixes (ex: 'of the Whale) to their corresponding suffix ids as well as
+# an internal 'key' which can be referenced in the lua file and work around localization issues
+WOW_SUFFIX_MAPPING_FILE = os.path.join(CWD, "../data/wow-suffix-mapping.json")
+
 # Output
 OUTPUT_PATH = os.path.join(CWD, "../data/wowhead.json")
 
@@ -216,7 +220,7 @@ def get_with_retry(driver, url):
     logger.debug(f"Getting {url}")
     driver.get(url)
 
-def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -> dict:
+def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, wow_suffix_mapping: dict) -> dict:
     """
     Parses a wowhead url and returns a dictionary with the following:
     - data (list of dictionaries)
@@ -322,7 +326,7 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
                                     row_data["Rank"] = "Best"
                                     row_data["ItemName"] = "Sentry's Shoulderguards"
                                     row_data["ItemID"] = "15531"
-                                    row_data["ItemSuffixID"] = ""
+                                    row_data["ItemSuffixKey"] = ""
                                     
                                     items["15531|"] = "Sentry's Shoulderguards"
                                     row_data["PriorityText"] = f"{row_current}/{row_count}" # For example, 1/10
@@ -371,14 +375,9 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
                                 skip_row = True
                                 continue
 
-                            # If "&&rand=" followed by numbers is in the item_id, save it as SuffixID
-                            rand_id = None
-                            if "&&rand=" in item_id:
-                                item_id, rand_id = item_id.split("&&rand=")
-                                # if rand_id contains &&, only take the first part
-                                if "&&" in rand_id:
-                                    rand_id = rand_id.split("&&")[0]
-                                logger.debug(f"Found rand_id {rand_id} for item {item_name} in {listname}")
+                            # If "&&" is in the link, it's probably rand or enchants. We can discard those.
+                            if "&&" in item_id:
+                                item_id = item_id.split("&&")[0]
 
                         else:
                             logger.warning(f"Did not find item link for {item_name} in {listname}")
@@ -390,12 +389,22 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str) -
                         if "\n" in item_name:
                             item_name = item_name.split("\n")[itemanchornum]
 
+
+
                         row_data["ItemName"] = item_name
                         row_data["ItemID"] = item_id
-                        if rand_id is None:
-                            rand_id = ""
-                        row_data["ItemSuffixID"] = rand_id
-                        items_key = f"{item_id}|{rand_id}"
+
+                        # Check if item_name contains any key from wow_suffix_mapping. Not using 'endswith' as some lists have inconsistent naming.
+                        #   For example, Rogue DPS lists "Cutthroat's Cape of the Tiger" as "Cutthroat's Cape of the Tiger +4/+4"
+                        # If it does, use the key as the suffix id
+                        # If it doesn't, use "" as the suffix id
+                        suffix_key = ""
+                        for key in wow_suffix_mapping:
+                            if key in item_name:
+                                suffix_key = wow_suffix_mapping[key]["key"]
+                                break
+                        row_data["ItemSuffixKey"] = suffix_key
+                        items_key = f"{item_id}|{suffix_key}"
                         items[items_key] = item_name
 
                         logger.info(f"Found item: {item_name} with id {item_id}")
@@ -463,6 +472,11 @@ def main():
         logger.critical("Chrome does not exist at " + CHROME_PATH)
         sys.exit(1)
 
+    # Confirm the mapping file exists
+    if not os.path.exists(WOW_SUFFIX_MAPPING_FILE):
+        logger.critical("Mapping file does not exist at " + WOW_SUFFIX_MAPPING_FILE)
+        sys.exit(1)
+
     
     logger.info("Starting...")
 
@@ -475,6 +489,15 @@ def main():
     options.binary_location = CHROME_PATH
     webdriver_service = Service(CHROMEDRIVER_PATH)
 
+    # Read the mapping file as json into a dictionary
+    wow_suffix_mapping = None
+    with open(WOW_SUFFIX_MAPPING_FILE, "r") as f:
+        wow_suffix_mapping = json.load(f)
+    if wow_suffix_mapping is None:
+        logger.critical("Failed to read mapping file")
+        sys.exit(1)
+    
+
     # Choose Chrome Browser
     browser = webdriver.Chrome(service=webdriver_service, options=options)
     browser.set_page_load_timeout(60)
@@ -486,7 +509,7 @@ def main():
     for wowhead_url in WOWHEAD_URLS:
         logger.info(f"Processing {wowhead_url['list']} ({wowhead_url['url']})")
         
-        parse_response = parse_wowhead_url(browser=browser, url=wowhead_url["url"], listname=wowhead_url["list"], phase=wowhead_url["phase"])
+        parse_response = parse_wowhead_url(browser=browser, url=wowhead_url["url"], listname=wowhead_url["list"], phase=wowhead_url["phase"], wow_suffix_mapping=wow_suffix_mapping)
         if len(parse_response["errors"]) > 0:
             logger.error("Errors:")
             for error in parse_response["errors"]:
