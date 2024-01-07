@@ -73,7 +73,8 @@ function BISListTooltip:ADDON_LOADED(event, addOnName)
         -- Add hooks
         GameTooltip:HookScript("OnTooltipSetItem", injectTooltip)
         ItemRefTooltip:HookScript("OnTooltipSetItem", injectTooltip)
-        ShoppingTooltip:HookScript("OnTooltipSetItem", injectTooltip)
+        ShoppingTooltip1:HookScript("OnTooltipSetItem", injectTooltip)
+        ShoppingTooltip2:HookScript("OnTooltipSetItem", injectTooltip)
 	end
 end
 
@@ -81,6 +82,21 @@ end
 -- ############################################################################################################
 -- # Tooltip Injection
 -- ############################################################################################################
+
+-- Mapping of suffixid to suffixkey
+-- Suffix key is an internal key used to map a range of suffixids to a single suffix
+-- For example, suffixID 6 (of Strength) maps to the internal key of "P".
+-- This allows us to map multiple suffixIDs in game to a single suffix in the loot table.
+-- It's a known issue that this may result in non-optimal suffixes getting shown as BIS but we're only able to use the information 
+-- we have from the BIS source which doesn't reliably indicate teh specific suffix combination that's ideal. Users need to be aware that 
+-- suffixes can vary and that they should use their own judgement when selecting the suffix.
+function getSuffixKeyforSuffixId(suffixid)
+    for index, value in next, suffixMapping do
+        if value["suffixid"] == suffixid then
+            return value["suffixkey"]
+        end
+    end
+end
 
 -- Extracts a value from the loot table based on a provided key for a given itemLink and itemName
 -- param: itemLink (string): format defined here: https://wowwiki-archive.fandom.com/wiki/API_GameTooltip_GetItem
@@ -92,15 +108,39 @@ function getValue(itemLink, itemName, key, lootTable)
     -- See https://wowwiki-archive.fandom.com/wiki/ItemString
     item_id = itemLink:match("item:(%d+):")
     item_suffix_id = itemLink:match("item:%d+:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(%d*):") -- there has got to be a nicer way to do this
+    if item_suffix_id ~= nil and item_suffix_id ~= "" then
+        suffix_key = getSuffixKeyforSuffixId(item_suffix_id)
+    end
+    
     for index, value in next, lootTable do
-        -- Use itemid match only. I originally used itemid AND itemsuffixid, but this was causing issues with items that have random enchants
-        -- Issues:
-        --  * Wowhead lists sometimes contain the rand (suffixid) and sometimes don't
-        --  * The suffixid is not always the same as the one linked in wowhead. For example, https://www.wowhead.com/classic/item=6617/sages-mantle?rand=767 has the rand id of 767 but in game, these can range between 754 and 838
+        -- We used to match on itemid alone however that resulted in random enchants (suffixes) not being matched. This resulted in some classes showing BIS for an item even if it had the wrong suffix
+        --     Example: Warlock DPS wants "Elder's Cloak of the Owl" but Priest healers want "Elder's Cloak of Intellect".
+        --     The suffixes are different but the itemid is the same which means that the item (regarless of suffix) will show as BIS for both classes
+        -- To fix this specific issue, we have a mapping of suffixid to an intenral "suffixkey". This allows us to map multiple suffixIDs in game to a single suffix in the loot table regardless of localisation
+        -- How it works:
+        --     If item_suffix_id is not nil, then we need to check if getSuffixKeyforSuffixId returns a value
+        --     If it does, then we need to check if the suffixkey matches the suffixkey in the loot table for the given itemid
+        --     If there is no item_suffix_id, then we just check the itemid
+        --
         -- Reference: https://wowwiki-archive.fandom.com/wiki/SuffixId
-        -- May save a mapping of possible values in the future but for now, just use itemid as that still only solves #1. #2 would need to be solved by parsing the text of the cell in wowhead
-        if value["itemid"] == item_id then
-            return value[key]
+        --
+        -- It's a known issue that this may result in non-optimal suffixes getting shown as BIS but we're only able to use the information we have from the BIS source which doesn't reliably indicate the
+        -- specific suffix combination that's ideal (example: +4 Agility/+3 Stamina is better than +3 Agility/+4 Stamina).
+        -- Users need to be aware that suffixes can vary and that they should use their own judgement when selecting the suffix.
+        
+
+        if item_suffix_id ~= nil and item_suffix_id ~= "" then
+            if suffix_key then
+                if value["itemid"] == item_id and value["itemsuffixkey"] == suffix_key then
+                    -- We have a match
+                    return value[key]
+                end
+            end
+        else
+            -- No suffix id, so just check the itemid
+            if value["itemid"] == item_id then
+                return value[key]
+            end
         end
     end
 end
