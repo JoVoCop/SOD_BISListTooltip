@@ -11,11 +11,17 @@ Currently sources BIS information from Wowhead. Additional sources to be added i
 * Meaningful changelogs. Changelogs indicate additions, removals, and changes.
 * Tooltip text matches the upstream source. For example, if your BIS list says something like 'Optional: Shadow', that will be displayed in the tooltip.
 
-### Known issues
-* Tooltip will display BIS items only based on itemid. Some items with a random enchant (ex: "...of the Owl") may show as a potential BIS even though it's not the proper random enchant for your class.
-    * Example: "Sage's Mantle of the Owl" is a BIS option for Priest Healers. The tooltip will show this correctly for Priest Healers but will also show for Warlock DPS as they want " Sage's Mantle of Shadow Wrath".
 
-## Running
+## Automation
+
+The following GitHub Actions are used...
+1. `parse-bis-lists.yaml` - Nightly job to detect changes to the BIS lists. If there's a change, a new changelog will be created and submmitted to a new PR.
+2. `auto-tag.yaml` - If the PR is merged, a new tag will be created and pushed to GitHub
+    * NOTE: if you're doing a bug fix PR that isn't adding a new feature, this should be tracked as a patch. To get a patch to go through, run 'S'quash and Merge' in the PR and add `#patch` to the end of the commit title.
+3. `auto-release.yaml` - Ran manually for now. Should be automated after `auto-tag` soon. Run against the tag and it will add a new GH release. Currently the zip needs to be added to curseforge manually. TODO: Add automation to auto-publish to Curseforge
+
+
+## Running parse-bis-lists manunally
 
 Assuming WSL2 for now...
 
@@ -25,3 +31,4 @@ Assuming WSL2 for now...
 3. Run `./install-chrome.sh`
 4. Run `pip install -r requirements.txt`
 5. Run `python parse-wowhead.py`
+6. If needed, you can generate the changelog and open a PR but it's HIGHLY recommended to leave this to the nightly GH Action

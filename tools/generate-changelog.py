@@ -6,6 +6,11 @@
 # Rather than just doing a plain diff, it will try to group the changes by contents.ItemName and page.list
 # Only the changes under "pages.contents" will be compared, the other keys will be ignored
 
+# Usage:
+# python tools/generate-changelog.py <tag> <stub>
+# tag: The tag to use for the changelog
+# stub: If true, will generate a stub changelog with just the tag and date, no changes
+
 import sys
 import os
 import json
@@ -22,6 +27,15 @@ WOWHEAD_DATA_PATH_NEW = os.path.join(CWD, "../data/wowhead.json")
 
 # Output
 OUTPUT_FILENAME = os.path.join(CWD, "../changelog.md.tmp")
+
+# Get tag from the first argument and optionally, get the 'stub' boolean from the second argument
+if len(sys.argv) < 2:
+    logger.error("No tag specified")
+    sys.exit(1)
+tag = sys.argv[1]
+stub = False
+if len(sys.argv) > 2:
+    stub = sys.argv[2] == "true"
 
 @logger.catch
 def main():
@@ -136,7 +150,11 @@ def main():
     logger.info(f"Writing changelog to {OUTPUT_FILENAME}")    
     with open(OUTPUT_FILENAME, "w") as f:
         # Today's date as YYYY-MM-DD
-        f.write(f"## {datetime.now().strftime('%Y-%m-%d')}\n\n")
+        f.write(f"## {tag} ({datetime.now().strftime('%Y-%m-%d')})\n\n")
+
+        if stub:
+            print("Stub changelog generated")
+            sys.exit(0)
 
         # Added items
         if len(added_items) > 0:

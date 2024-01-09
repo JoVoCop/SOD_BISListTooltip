@@ -90,7 +90,7 @@ jobs:
         id: generate_changelog
         if: steps.check_changes.outputs.changed != 'false'
         run: |
-          python tools/generate-changelog.py
+          python tools/generate-changelog.py ${{ steps.gen_tag.outputs.new_tag }}
 
           # Multi-line output
           changelogoutput=$(cat changelog.md.tmp)
