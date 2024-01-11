@@ -5189,12 +5189,12 @@
                 },
                 {
                     "Rank": "Best",
-                    "ItemName": "Sentry's Shoulderguards",
-                    "ItemID": "15531",
-                    "ItemSuffixKey": "",
                     "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "1",
+                    "ItemName": "Sentry's Shoulderguards",
+                    "ItemID": "15531",
+                    "ItemSuffixKey": "",
                     "Source": "Random level 25+ mobs (World drop.)"
                 },
                 {
