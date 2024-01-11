@@ -98,7 +98,10 @@ WOWHEAD_URLS = [
         "spec": "Tank",
         "list": "Paladin Tank",
         "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/tank-bis-gear-pve-phase-1"
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/tank-bis-gear-pve-phase-1",
+        "custom_behaviors": {
+            "suffix_from_column_text": True # The Paladin Tank list has a number of world drop items in a single row. These all have the same suffix. We need to use the text in the column to determine the suffix rather than from the item link.
+        }
     },
     
     # Priest
@@ -162,7 +165,7 @@ WOWHEAD_URLS = [
         "phase": "1",
         "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/tank-bis-gear-pve-phase-1"
     },
-
+    
     # Warlock
     {
         "class": "Warlock",
@@ -215,14 +218,314 @@ WOW_SUFFIX_MAPPING_FILE = os.path.join(CWD, "../data/wow-suffix-mapping.json")
 # Output
 OUTPUT_PATH = os.path.join(CWD, "../data/wowhead.json")
 
+class Item:
+    def __init__(self):
+        self.name = None
+        self.id = None
+        self.source = None
+        self.rank = None
+        self.suffixkey = None
+        self.prioritytext = None
+        self.prioritynumber = None
+        self.phase = None
+        self.key = None
+
+    def __str__(self):
+        return f"{self.name} ({self.id})"
+
+    def __repr__(self):
+        return self.__str__()
+    
+    def get_name(self) -> str:
+        return self.name
+    
+    def set_name(self, name: str) -> None:
+        logger.debug(f"Setting name to \"{name}\"")
+        self.name = name
+
+    def get_id(self) -> str:
+        return self.id
+    
+    def set_id(self, id: str) -> None:
+        self.id = id
+
+    def get_key(self) -> str:
+        return self.key
+    
+    def set_key(self, key: str) -> None:
+        logger.debug(f"Setting key to \"{key}\"")
+        self.key = key
+
+    def get_source(self) -> str:
+        return self.source
+    
+    def set_source(self, source: str) -> None:
+        self.source = source
+
+    def get_rank(self) -> str:
+        return self.rank
+    
+    def set_rank(self, rank: str) -> None:    
+        self.rank = rank
+
+    def get_suffixkey(self) -> str:
+        return self.suffixkey
+    
+    def set_suffixkey(self, suffixkey: str) -> None:
+        self.suffixkey = suffixkey
+
+    def get_prioritytext(self) -> str:
+        return self.prioritytext
+    
+    def set_prioritytext(self, prioritytext: str) -> None:
+        self.prioritytext = prioritytext
+
+    def get_prioritynumber(self) -> int:
+        return self.prioritynumber
+    
+    def set_prioritynumber(self, prioritynumber: int) -> None:
+        self.prioritynumber = prioritynumber
+
+    def get_phase(self) -> str:
+        return self.phase
+    
+    def set_phase(self, phase: str) -> None:
+        self.phase = phase
+
+    def to_json(self) -> dict:
+        return {
+            "Rank": self.rank,
+            "PriorityText": self.prioritytext,
+            "PriorityNumber": self.prioritynumber,
+            "Phase": self.phase,
+            "ItemName": self.name,
+            "ItemID": self.id,
+            "ItemSuffixKey": self.suffixkey,
+            "Source": self.source
+        }
+    
+    # static method to convert item column html to an Item object
+    @staticmethod
+    def from_column_html(item: "Item", link_num: int, column_html: str, column_text: str, links: list, wow_suffix_mapping: dict, custom_behaviors: dict) -> tuple["Item", str]:
+        """
+        Converts the html of a column to an Item object
+        param item: The Item object to update
+        param link_num: The link number to convert
+        param column_html: The innerHtml of the column
+        param column_text: The text of the column
+        param links: The list of selenium links in the column
+        param wow_suffix_mapping: The suffix mapping dictionary
+
+        return: An Item object
+        return: A string containing the reason for error
+        """
+
+        if item is None:
+            item = Item()
+
+
+        # Custom behaviors
+        suffix_from_column_text = False
+        if custom_behaviors is not None and "suffix_from_column_text" in custom_behaviors:
+            suffix_from_column_text = custom_behaviors["suffix_from_column_text"]
+
+        # Let's iterate over each item_link_data_testing["links"] and see if we print the following...
+        # * Name of the item (link.text.strip())
+        # * Any text between the link and the next link (link.tail.strip())
+        # * The href (link.get_attribute("href"))
+                
+        # Iterate over item_link_data_testing["links"] using an index so we can get the next link
+        for item_link_num in range(len(links)):
+            if item_link_num != link_num:
+                continue
+            link = links[item_link_num]
+            
+            # Get the href
+            href = link.get_attribute("href")
+
+            logger.debug(f"Processing link {link.text.strip()}")
+            if "item=" not in href:
+                # Not an item link. We don't care about it
+                return None, f"Skipping link {link.text.strip()} in because it is not an item link"
+
+            # Get the text between the link and the next link
+            text_between = ""
+            if item_link_num == len(links) - 1:
+                # Get html of the current link
+                link_html = link.get_attribute("outerHTML")
+
+                # Get all text after the link
+                text_between = column_html.split(link_html)[1].strip()
+            else:
+                next_link = links[item_link_num + 1]
+
+                # Get html of the current link
+                link_html = link.get_attribute("outerHTML")
+                # Get html of the next link
+                next_link_html = next_link.get_attribute("outerHTML")
+                # Get the text between the two links
+                text_between = column_html.split(link_html)[1].split(next_link_html)[0].strip()
+                
+
+            logger.debug("Text between link and next link: " + text_between)
+            if text_between == "":
+                item_name = link.text.strip()
+            else:
+
+                # Remove any html tags from the text between
+                # An html tag is defined as < followed by any number of characters that are not > followed by >
+                import re
+                text_between = re.sub(r"<[^>]*>", "", text_between)
+
+                other_characters_to_remove = [
+                    "/",
+                    "&nbsp;"
+                ]
+                characters_to_remove_from_end = [
+                    ","
+                ]
+                for character in other_characters_to_remove:
+                    text_between = text_between.replace(character, "")
+
+                # Remove whitespace
+                text_between = text_between.strip()
+
+                # Remove any characters from the end of the string
+                for character in characters_to_remove_from_end:
+                    if text_between.endswith(character):
+                        text_between = text_between[:-1]
+                
+                # remove whitespace again
+                text_between = text_between.strip()
+
+                if text_between == "":
+                    item_name = link.text.strip()
+                else:
+                    item_name = f"{link.text.strip()} {text_between}"
+
+            # If there are double spaces, replace them with single spaces
+            while "  " in item_name:
+                logger.debug(f"Replacing double spaces in \"{item_name}\"")
+                item_name = item_name.replace("  ", " ")
+
+            
+            logger.debug(f"href: {href}")
+
+            # Get the item id
+            item_id = href.split("item=")[1].split("/")[0]
+
+            # If "&&" is in the link, it's probably rand or enchants. We can discard those.
+            if "&&" in item_id:
+                item_id = item_id.split("&&")[0]
+
+            logger.debug(f"item_id: {item_id}")
+
+            # Get the item name
+            logger.debug(f"item_name: \"{item_name}\"")
+
+             # Check if item_name contains any key from wow_suffix_mapping. Not using 'endswith' as some lists have inconsistent naming.
+            #   For example, Rogue DPS lists "Cutthroat's Cape of the Tiger" as "Cutthroat's Cape of the Tiger +4/+4"
+            # If it does, use the key as the suffix id
+            # If it doesn't, use "" as the suffix id
+            suffix_key = ""
+            for key in wow_suffix_mapping:
+                if suffix_from_column_text:
+                    # Special way - match the suffix in the column text
+                    if key.lower() in column_text.lower():
+                        suffix_key = wow_suffix_mapping[key]["key"]
+                        break
+                else:
+                    # Normal way - match the suffix in the item name
+                    if key.lower() in item_name.lower():
+                        suffix_key = wow_suffix_mapping[key]["key"]
+                        break
+
+
+            item_key = f"{item_id}|{suffix_key}"
+            item.set_key(item_key)
+            item.set_id(item_id)
+            item.set_name(item_name)
+            item.set_suffixkey(suffix_key)
+        
+        return item, None
+        
+    
+
+# Represents a single BIS page of data
+class Page:
+    def __init__(self, name: str, url: str, phase: str, spec: str, classname: str):
+        self.name = name
+        self.url = url
+        self.phase = phase
+        self.spec = spec
+        self.classname = classname
+        self.items = [] # List of Items
+        self.item_keys = {} # Dictionary of itemid|suffixid to name.
+        self.errors = []
+        self.warnings = []
+
+
+    def __str__(self):
+        return f"{self.name} ({self.url})"
+
+    def __repr__(self):
+        return self.__str__()
+
+    def add_item(self, item: Item) -> None:
+        self.items.append(item)
+
+    def get_items(self) -> list:
+        return self.items
+    
+    def add_item_key(self, key: str, name: str) -> None:
+        self.item_keys[key] = name
+    
+    def get_item_keys(self) -> dict:
+        return self.item_keys
+
+    def get_name(self):
+        return self.name
+
+    def get_url(self):
+        return self.url
+    
+    def get_phase(self):
+        return self.phase
+    
+    def get_classname(self):
+        return self.classname
+    
+    def get_spec(self):
+        return self.spec
+    
+    def add_error(self, error: str) -> None:
+        self.errors.append(error)
+    
+    def get_errors(self):
+        return self.errors
+    
+    def add_warning(self, warning: str) -> None:
+        self.warnings.append(warning)
+    
+    def get_warnings(self):
+        return self.warnings
+    
+    def get_item_json(self):
+        output = []
+        for item in self.items:
+            output.append(item.to_json())
+        return output
+
+    
+
 @retry(TimeoutException, tries=3)
 def get_with_retry(driver, url):
     logger.debug(f"Getting {url}")
     driver.get(url)
 
-def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, wow_suffix_mapping: dict) -> dict:
+def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, spec: str, classname: str, custom_behaviors: dict, wow_suffix_mapping: dict) -> Page:
     """
-    Parses a wowhead url and returns a dictionary with the following:
+    Parses a wowhead url and returns a Page object with the following:
     - data (list of dictionaries)
         - Rank
         - ItemName
@@ -244,12 +547,10 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, w
     logger.debug("Getting tables")
     tables = guide_body.find_elements(By.TAG_NAME, "table")
 
+    page = Page(name=listname, url=url, phase=phase, spec=spec, classname=classname)
+
     # Iterate over tables and find the one with the correct columns
     # Correct columns are "Rank", "Item", and "Source" in that order in the first row
-    data = []
-    errors = []
-    warnings = []
-    items = {} # Dictionary of itemid|suffixid to name.
     logger.debug("Iterating over tables")
     for table in tables:
         # Find all rows in the table
@@ -277,20 +578,23 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, w
 
             # Get the number of Items per row - edge case but some rows have multiple items
             items_per_row = 0
+            items_column_html = None
+            item_links = []
             for i, column in enumerate(row.find_elements(By.TAG_NAME, "td")):
                 column_name = column_names[i]
                 if column_name == "Item":
                     item_links = column.find_elements(By.TAG_NAME, "a")
+                    items_column_html = column.get_attribute("innerHTML")
                     if len(item_links) > 0:
                         items_per_row = len(item_links)
                         logger.debug(f"Found {items_per_row} items in row {row_current}")
                         break
-
             
             for itemanchornum in range(items_per_row):
+                logger.info(f"-------------------------- Row: {row_current}, Anchor: {itemanchornum} --------------------------")
                 logger.debug(f"Processing item {itemanchornum} in row {row_current}")
 
-                row_data = {}
+                item = Item()
                 
                 rank_found = False
                 item_found = False
@@ -318,112 +622,53 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, w
                         if icon:
                             logger.debug(f"Found icon {icon.get_attribute('style')}")
 
-                            # Exceptions due to formatting issues on Wowhead :(
-                            if listname == "Paladin DPS":
-                                # Shoulders are misformatted for first row. Instead of the rank, the item is listed
-                                if column.text.strip() == "Sentry's Shoulderguards":
-                                    logger.warning("Processing exception for Paladin DPS: Sentry's Shoulderguards")
-                                    row_data["Rank"] = "Best"
-                                    row_data["ItemName"] = "Sentry's Shoulderguards"
-                                    row_data["ItemID"] = "15531"
-                                    row_data["ItemSuffixKey"] = ""
-                                    
-                                    items["15531|"] = "Sentry's Shoulderguards"
-                                    row_data["PriorityText"] = f"{row_current}/{row_count}" # For example, 1/10
-                                    row_data["PriorityNumber"] = row_current # For example, 1. Useful for ordering the items for presentation
-                                    row_data["Phase"] = "1"
-                                    item_found = True # Mark item as found so we don't process the rest of the row
-                                    continue
-
                             icon_image = icon.get_attribute("style").split("url(\"")[1].split("\"")[0].split("/")[-1]
 
                             if icon_image in WOWHEAD_IMAGE_TO_SPEC:
-                                row_data["Rank"] = column.text.strip() + f" ({WOWHEAD_IMAGE_TO_SPEC[icon_image]})"
+                                item.set_rank(column.text.strip() + f" ({WOWHEAD_IMAGE_TO_SPEC[icon_image]})")
                             else:
-                                errors.append(f"Unknown icon image {icon_image}")
-                                row_data["Rank"] = column.text.strip() + f" ({icon_image})"
+                                page.add_error(f"Unknown icon image {icon_image}")
+                                item.set_rank(column.text.strip() + f" ({icon_image})")
                         else:
-                            row_data["Rank"] = column.text.strip()
+                            item.set_rank(column.text.strip())
 
                         # Log the row number as "Priority"
-                        row_data["PriorityText"] = f"{row_current}/{row_count}" # For example, 1/10
-                        row_data["PriorityNumber"] = row_current # For example, 1. Useful for ordering the items for presentation
-
-                        # Log the phase as "Phase"
-                        row_data["Phase"] = phase
-
+                        item.set_prioritytext(f"{row_current}/{row_count}") # For example, 1/10
+                        item.set_prioritynumber(row_current) # For example, 1. Useful for ordering the items for presentation
+                        item.set_phase(phase)
                     elif column_name == "Item":
-                        item_name = column.text.strip()
                         if item_found:
-                            # Don't process multiple items in a single row
-                            logger.debug(f"Skipping item {item_name} because item was already found")
+                            # Don't process item in a single row
+                            logger.debug(f"Skipping item {item.get_name()} because item was already found")
                             continue
-                        item_found = True
 
-                        # If column name is 'Item', get the item name from the text and the item id from the href
-                        # For item id, we uise regex to extract the numbers after item= and between slashes. For example, "https://www.wowhead.com/classic/item=211842/rakkamars-tattered-thinking-cap" results in 211842
-
-                        
-                        item_links = column.find_elements(By.TAG_NAME, "a")
-                        if len(item_links) > 0:
-                            item_link = item_links[itemanchornum].get_attribute("href")
-                            if "item=" in item_link:
-                                item_id = item_link.split("item=")[1].split("/")[0]
-                            else:
-                                logger.warning(f"Did not find item id for {item_name} in {listname} (link number: {itemanchornum}))")
-                                warnings.append(f"Did not find item id for {item_name} in {listname} (link number: {itemanchornum}))")
-                                skip_row = True
-                                continue
-
-                            # If "&&" is in the link, it's probably rand or enchants. We can discard those.
-                            if "&&" in item_id:
-                                item_id = item_id.split("&&")[0]
-
-                        else:
-                            logger.warning(f"Did not find item link for {item_name} in {listname}")
-                            warnings.append(f"Did not find item link for {item_name} in {listname}")
+                        item, reason = Item.from_column_html(item, itemanchornum, items_column_html, column.text.strip(), item_links, wow_suffix_mapping, custom_behaviors)
+                        if item is None:
+                            logger.warning(reason)
+                            page.add_warning(reason)
                             skip_row = True
                             continue
 
-                        # If item_name contains a line break, take current itemanchornum iteration number
-                        if "\n" in item_name:
-                            item_name = item_name.split("\n")[itemanchornum]
+                        item_found = True
 
-
-
-                        row_data["ItemName"] = item_name
-                        row_data["ItemID"] = item_id
-
-                        # Check if item_name contains any key from wow_suffix_mapping. Not using 'endswith' as some lists have inconsistent naming.
-                        #   For example, Rogue DPS lists "Cutthroat's Cape of the Tiger" as "Cutthroat's Cape of the Tiger +4/+4"
-                        # If it does, use the key as the suffix id
-                        # If it doesn't, use "" as the suffix id
-                        suffix_key = ""
-                        for key in wow_suffix_mapping:
-                            if key in item_name:
-                                suffix_key = wow_suffix_mapping[key]["key"]
-                                break
-                        row_data["ItemSuffixKey"] = suffix_key
-                        items_key = f"{item_id}|{suffix_key}"
-                        items[items_key] = item_name
-
-                        logger.info(f"Found item: {item_name} with id {item_id}")
+                        logger.info(f"Found item {item.get_name()} with id {item.get_id()} and suffix key {item.get_suffixkey()}")
+                        page.add_item_key(item.get_key(), item.get_name())
                     elif column_name == "Source":
                         source_found = True
                         if items_per_row > 1:
                             # If there are multiple items in the row,  just specify "multiple"
-                            row_data["Source"] = "Multiple"
+                            item.set_source("Multiple")
                         else:
-                            row_data["Source"] = column.text.strip()
+                            item.set_source(column.text.strip())
                     elif column_name == "Location":
                         # Warrior sheets. Append to source
                         if items_per_row > 1:
                             pass
-                        elif "Source" in row_data:
-                            row_data["Source"] += f" ({column.text.strip()})"
+                        elif item.get_source() is not None:
+                            item.set_source(f"{item.get_source()} ({column.text.strip()})")
                     else:
                         logger.warning(f"Unknown column name {column_name}")
-                        warnings.append(f"Unknown column name {column_name}")
+                        page.add_warning(f"Unknown column name {column_name}")
                         #raise Exception(f"Unknown column name {column_name}")
                     
                 if skip_row:
@@ -432,28 +677,23 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, w
 
                 # Confirm that all columns were found
                 if not rank_found:
-                    errors.append(f"Did not find Rank column in row {row_current}")
+                    page.add_error(f"Did not find Rank column in row {row_current}")
                     logger.error(f"Did not find Rank column in row {row_current}")
                 if not item_found:
-                    errors.append(f"Did not find Item column in row {row_current}")
+                    page.add_error(f"Did not find Item column in row {row_current}")
                     logger.error(f"Did not find Item column in row {row_current}")
                 if not source_found:
-                    errors.append(f"Did not find Source column in row {row_current}")
+                    page.add_error(f"Did not find Source column in row {row_current}")
                     logger.error(f"Did not find Source column in row {row_current}")
                 
                 logger.debug(f"Adding row {row_current} to data")
-                data.append(row_data)
+                page.add_item(item)
 
-    if len(data) == 0:
-        errors.append("Did not find any data")
+    if len(page.get_items()) == 0:
+        page.add_error("Did not find any data")
         logger.error("Did not find any data")
     
-    return {
-        "data": data,
-        "items": items,
-        "errors": errors,
-        "warnings": warnings
-    }
+    return page
 
 @logger.catch(onerror=lambda _: sys.exit(1)) # Catch all exceptions and exit with code 1
 def main():
@@ -505,37 +745,40 @@ def main():
     pages = []
     errors = []
     warnings = []
-    items = {} # Dictionary of itemid|suffixid to item names
+    item_keys = {} # Dictionary of itemid|suffixid to item names
     for wowhead_url in WOWHEAD_URLS:
         logger.info(f"Processing {wowhead_url['list']} ({wowhead_url['url']})")
+        custom_behaviors = None
+        if "custom_behaviors" in wowhead_url:
+            custom_behaviors = wowhead_url["custom_behaviors"]
         
-        parse_response = parse_wowhead_url(browser=browser, url=wowhead_url["url"], listname=wowhead_url["list"], phase=wowhead_url["phase"], wow_suffix_mapping=wow_suffix_mapping)
-        if len(parse_response["errors"]) > 0:
+        wowhead_page = parse_wowhead_url(browser=browser, url=wowhead_url["url"], listname=wowhead_url["list"], phase=wowhead_url["phase"], spec=wowhead_url["spec"], classname=wowhead_url["class"], custom_behaviors=custom_behaviors, wow_suffix_mapping=wow_suffix_mapping)
+        if len(wowhead_page.get_errors()) > 0:
             logger.error("Errors:")
-            for error in parse_response["errors"]:
+            for error in wowhead_page.get_errors():
                 logger.error(error)
                 errors.append(error)
-        if len(parse_response["warnings"]) > 0:
+        if len(wowhead_page.get_warnings()) > 0:
             logger.warning("Warnings:")
-            for warning in parse_response["warnings"]:
+            for warning in wowhead_page.get_warnings():
                 logger.warning(warning)
                 warnings.append(warning)
-        if len(parse_response["data"]) > 0:
-            logger.success(f"We have {len(parse_response['data'])} rows of data for {wowhead_url['list']}")
+        if len(wowhead_page.get_items()) > 0:
+            logger.success(f"We have {len(wowhead_page.get_items())} rows of data for {wowhead_page.get_name()}")
             page = {
-                "class": wowhead_url["class"],
-                "spec": wowhead_url["spec"],
-                "list": wowhead_url["list"],
-                "contents": parse_response["data"]
+                "class": wowhead_page.get_classname(),
+                "spec": wowhead_page.get_spec(),
+                "list": wowhead_page.get_name(),
+                "contents": wowhead_page.get_item_json()
             }
             pages.append(page)
-            items.update(parse_response["items"])
+            item_keys.update(wowhead_page.get_item_keys())
 
 
 
     # Summarize data
     output = {
-        "items": items,
+        "items": item_keys,
         "pages": pages
     }
     # logger.debug(json.dumps(output, indent=4))
