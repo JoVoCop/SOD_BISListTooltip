@@ -211,6 +211,56 @@ WOWHEAD_IMAGE_TO_SPEC = {
 
 }
 
+# Allowed slots
+WOW_SLOTS = [
+    "head",
+    "neck",
+    "shoulders",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "finger",
+    "trinket",
+    "main-hand",
+    "two-hand",
+    "off-hand",
+    "one-hand",
+    "ranged",
+    "shield",
+    "relic"
+]
+
+# Headings are inconsistent. This is a mapping of aliases to the correct heading
+WOW_SLOT_ALIASES = {
+    "cloak": "back",
+    "shoulder": "shoulders",
+    "wrists": "wrist",
+    "glove": "hands",
+    "gloves": "hands",
+    "hand": "hands",
+    "belt": "waist",
+    "rings": "finger",
+    "ring": "finger",
+    "fingers": "finger",
+    "trinkets": "trinket",
+    "staves": "two-hand",
+    "staff": "two-hand",
+    "weapon": "two-hand",
+    "two-handed": "two-hand",
+    "duel-wield": "one-hand",
+    "wand": "ranged",
+    "wands": "ranged",
+    "idol": "relic",
+    "idols": "relic",
+    "relics": "relic",
+    "libram": "relic",
+    "librams": "relic",
+}
+
 # Mapping file for english suffixes (ex: 'of the Whale) to their corresponding suffix ids as well as
 # an internal 'key' which can be referenced in the lua file and work around localization issues
 WOW_SUFFIX_MAPPING_FILE = os.path.join(CWD, "../data/wow-suffix-mapping.json")
@@ -229,6 +279,7 @@ class Item:
         self.prioritynumber = None
         self.phase = None
         self.key = None
+        self.slot = None
 
     def __str__(self):
         return f"{self.name} ({self.id})"
@@ -292,6 +343,17 @@ class Item:
     def set_phase(self, phase: str) -> None:
         self.phase = phase
 
+    def get_slot(self) -> str:
+        return self.slot
+    
+    def set_slot(self, slot: str) -> None:
+        if slot not in WOW_SLOTS:
+            if slot in WOW_SLOT_ALIASES:
+                slot = WOW_SLOT_ALIASES[slot]
+            else:
+                raise Exception(f"Invalid slot {slot}")
+        self.slot = slot
+
     def to_json(self) -> dict:
         return {
             "Rank": self.rank,
@@ -301,7 +363,8 @@ class Item:
             "ItemName": self.name,
             "ItemID": self.id,
             "ItemSuffixKey": self.suffixkey,
-            "Source": self.source
+            "Source": self.source,
+            "Slot": self.slot,
         }
     
     # static method to convert item column html to an Item object
@@ -570,6 +633,28 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, s
             logger.info(f"Found columns {column_names}")
             continue
 
+        
+
+        # Determine slot by finding previous h3 tag with an id in (back, chest, head, neck, shoulders, waist, wrist, feet, finger, hands, legs, mainn-hand, off-hand, ranged, trinket)
+        # Get the previous h3 tag
+        item_slot = None
+        previous_h3 = table.find_elements(By.XPATH, "preceding::h3")
+        if len(previous_h3) > 0:
+            previous_h3 = previous_h3[-1]
+            logger.debug(f"Found previous h3 tag with text {previous_h3.text.strip()}")
+            if previous_h3.get_attribute("id") is not None:
+                logger.debug(f"Found previous h3 tag with id {previous_h3.get_attribute('id')}")
+
+                # Get the id
+                item_slot = str(previous_h3.get_attribute("id"))
+
+                logger.info(f"Found slot {item_slot}")
+        else:
+            logger.error("Did not find previous h3 tag (item_slot)")
+            raise Exception("Did not find previous h3 tag (item_slot)")
+        
+        
+
         # Find the data in each row
         row_current = 0
         row_count = len(rows) - 1
@@ -595,7 +680,8 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, s
                 logger.debug(f"Processing item {itemanchornum} in row {row_current}")
 
                 item = Item()
-                
+                item.set_slot(item_slot)
+
                 rank_found = False
                 item_found = False
                 source_found = False
