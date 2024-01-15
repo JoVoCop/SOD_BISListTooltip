@@ -131,9 +131,19 @@ function getValue(itemLink, itemName, key, lootTable)
 
         if item_suffix_id ~= nil and item_suffix_id ~= "" then
             if suffix_key then
+                -- We have a suffix key, so check the itemid and suffix key
                 if value["itemid"] == item_id and value["itemsuffixkey"] == suffix_key then
-                    -- We have a match
-                    return value[key]
+
+                    -- Check if we have a BIS suffix id and if the setting is enabled
+                    if value["itembissuffixid"] ~= "" and BisListTooltipDB.filterBISSuffixes then
+                        -- We have a BIS suffix id, so check if it matches the item_suffix_id
+                        if value["itembissuffixid"] == item_suffix_id then
+                            return value[key]
+                        end
+                    else
+                        -- No BIS suffix id, so just return the value
+                        return value[key]
+                    end
                 end
             end
         else
