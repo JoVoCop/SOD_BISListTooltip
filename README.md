@@ -20,7 +20,7 @@ My philosophy with this addon is to strictly use the data available in the BIS l
 For example, the Rogue BIS list in phase 1 identifies "Cutthroat's Cape of the Monkey" but this can have the following rolls: "+(3 - 4) Agility , +(3 - 4) Stamina". When the "Show only BIS suffixes" toggle is enabled, the addon will interpret this as "+4 Agility, +4 Stamina" and will only show this combination as BIS in the tooltip. If you disable this setting, the addon will show all possible combinations of the suffix "of the Monkey" as BIS in the tooltip.
 
 There are some exceptions for this logic:
-* When the suffix (ex: "of Power") is not found as a known possible suffix for an item but the BIS list indicates it is BIS. In this case, the addon will show all versions of 'of Power' as BIS in the tooltip as we cannot determine the specific rolls available.
+* When the suffix (ex: "of the Tiger") is not found as a known possible suffix for an item but the BIS list indicates it is BIS. In this case, the addon will show all versions of 'of the Tiger' as BIS in the tooltip as we cannot determine the specific rolls available. This happens with "Cutthroat's Cape of the Tiger" in P1 as the Rogue DPS BIS List indicates this is BIS whereas that suffix is not shown as being available.
 
 
 ## Automation
