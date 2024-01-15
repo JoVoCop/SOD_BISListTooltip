@@ -198,6 +198,7 @@ WOWHEAD_URLS = [
         "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warrior/tank-bis-gear-pve-phase-1"
     },
 ]
+WOWHEAD_ITEM_URL_PREFIX = "https://classic.wowhead.com/item="
 
 # WOWHEAD Image to Spec Mapping
 WOWHEAD_IMAGE_TO_SPEC = {
@@ -369,9 +370,10 @@ class Item:
     
     # static method to convert item column html to an Item object
     @staticmethod
-    def from_column_html(item: "Item", link_num: int, column_html: str, column_text: str, links: list, wow_suffix_mapping: dict, custom_behaviors: dict) -> tuple["Item", str]:
+    def from_column_html(item_browser: webdriver, item: "Item", link_num: int, column_html: str, column_text: str, links: list, wow_suffix_mapping: dict, custom_behaviors: dict) -> tuple["Item", str]:
         """
         Converts the html of a column to an Item object
+        param item_browser: The selenium browser
         param item: The Item object to update
         param link_num: The link number to convert
         param column_html: The innerHtml of the column
@@ -390,6 +392,7 @@ class Item:
         # Custom behaviors
         suffix_from_column_text = False
         if custom_behaviors is not None and "suffix_from_column_text" in custom_behaviors:
+            logger.info("Using custom behavior suffix_from_column_text")
             suffix_from_column_text = custom_behaviors["suffix_from_column_text"]
 
         # Let's iterate over each item_link_data_testing["links"] and see if we print the following...
@@ -486,7 +489,7 @@ class Item:
             # Get the item name
             logger.debug(f"item_name: \"{item_name}\"")
 
-             # Check if item_name contains any key from wow_suffix_mapping. Not using 'endswith' as some lists have inconsistent naming.
+            # Check if item_name contains any key from wow_suffix_mapping. Not using 'endswith' as some lists have inconsistent naming.
             #   For example, Rogue DPS lists "Cutthroat's Cape of the Tiger" as "Cutthroat's Cape of the Tiger +4/+4"
             # If it does, use the key as the suffix id
             # If it doesn't, use "" as the suffix id
@@ -495,11 +498,25 @@ class Item:
                 if suffix_from_column_text:
                     # Special way - match the suffix in the column text
                     if key.lower() in column_text.lower():
+                        # We have a suspected suffix match. Let's hit the wowhead page for the item and confirm
+                        if item_id_has_possible_suffixes(item_browser, item_id):
+                            logger.debug(f"ItemID {item_id} has possible suffixes")
+                        else:
+                            logger.warning(f"ItemID {item_id} does not have possible suffixes. Skipping suffix match for {item_name} even though it contains {key}")
+                            break
+    
                         suffix_key = wow_suffix_mapping[key]["key"]
                         break
                 else:
                     # Normal way - match the suffix in the item name
                     if key.lower() in item_name.lower():
+                        # We have a suspected suffix match. Let's hit the wowhead page for the item and confirm
+                        if item_id_has_possible_suffixes(item_browser, item_id):
+                            logger.debug(f"ItemID {item_id} has possible suffixes")
+                        else:
+                            logger.warning(f"ItemID {item_id} does not have possible suffixes. Skipping suffix match for {item_name} even though it contains {key}")
+                            break
+                        
                         suffix_key = wow_suffix_mapping[key]["key"]
                         break
 
@@ -586,7 +603,34 @@ def get_with_retry(driver, url):
     logger.debug(f"Getting {url}")
     driver.get(url)
 
-def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, spec: str, classname: str, custom_behaviors: dict, wow_suffix_mapping: dict) -> Page:
+def item_id_has_possible_suffixes(browser: webdriver, item_id: str) -> bool:
+    """
+    Returns True if the item id has possible suffixes. Returns False otherwise.
+    
+    A suffix is possible if the itemid page has an h2 tag with the text "Random Enchantments"
+
+    param: browser: The selenium browser
+    param: item_id: The item id to check
+
+    return: True if the item id has possible suffixes. False otherwise.
+    """
+
+    # Get the item page
+    item_url = f"{WOWHEAD_ITEM_URL_PREFIX}{item_id}"
+    logger.debug(f"Getting {item_url}")
+    get_with_retry(browser, item_url)
+
+    # Get all h2 tags
+    h2s = browser.find_elements(By.TAG_NAME, "h2")
+
+    # Check if any of the h2 tags have the text "Random Enchantments"
+    for h2 in h2s:
+        if h2.text.strip() == "Random Enchantments":
+            return True
+    
+    return False
+
+def parse_wowhead_url(browser: webdriver, item_browser: webdriver, url: str, listname: str, phase: str, spec: str, classname: str, custom_behaviors: dict, wow_suffix_mapping: dict) -> Page:
     """
     Parses a wowhead url and returns a Page object with the following:
     - data (list of dictionaries)
@@ -728,7 +772,7 @@ def parse_wowhead_url(browser: webdriver, url: str, listname: str, phase: str, s
                             logger.debug(f"Skipping item {item.get_name()} because item was already found")
                             continue
 
-                        item, reason = Item.from_column_html(item, itemanchornum, items_column_html, column.text.strip(), item_links, wow_suffix_mapping, custom_behaviors)
+                        item, reason = Item.from_column_html(item_browser, item, itemanchornum, items_column_html, column.text.strip(), item_links, wow_suffix_mapping, custom_behaviors)
                         if item is None:
                             logger.warning(reason)
                             page.add_warning(reason)
@@ -827,6 +871,11 @@ def main():
     # Choose Chrome Browser
     browser = webdriver.Chrome(service=webdriver_service, options=options)
     browser.set_page_load_timeout(60)
+
+    # Secondary browser for item pages
+    item_browser = webdriver.Chrome(service=webdriver_service, options=options)
+    item_browser.set_page_load_timeout(60)
+
     # Iterate over WOWHEAD_URLS
     pages = []
     errors = []
@@ -838,7 +887,7 @@ def main():
         if "custom_behaviors" in wowhead_url:
             custom_behaviors = wowhead_url["custom_behaviors"]
         
-        wowhead_page = parse_wowhead_url(browser=browser, url=wowhead_url["url"], listname=wowhead_url["list"], phase=wowhead_url["phase"], spec=wowhead_url["spec"], classname=wowhead_url["class"], custom_behaviors=custom_behaviors, wow_suffix_mapping=wow_suffix_mapping)
+        wowhead_page = parse_wowhead_url(browser=browser, item_browser=item_browser, url=wowhead_url["url"], listname=wowhead_url["list"], phase=wowhead_url["phase"], spec=wowhead_url["spec"], classname=wowhead_url["class"], custom_behaviors=custom_behaviors, wow_suffix_mapping=wow_suffix_mapping)
         if len(wowhead_page.get_errors()) > 0:
             logger.error("Errors:")
             for error in wowhead_page.get_errors():

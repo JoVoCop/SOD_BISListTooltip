@@ -56,7 +56,7 @@
         "890|": "Twisted Chanter's Staff",
         "209570|": "Tome of Cavern Lore",
         "209590|": "Cracked Water Globe",
-        "4838|AH": "Orb of Power",
+        "4838|": "Orb of Power",
         "5611|": "Tear of Grief",
         "209576|": "Mind-Expanding Mushroom",
         "211510|": "Twilight Slayer's Cowl",
@@ -187,7 +187,7 @@
         "209565|": "Band of Deep Places",
         "2039|": "Plains Ring",
         "6414|": "Seal of Sylvanas",
-        "12985|L": "Ring of Defense",
+        "12985|": "Ring of Defense",
         "4385|": "Green Tinted Goggles",
         "4252|": "Dark Leather Shoulders",
         "15351|": "Headhunter's Bands",
@@ -1212,7 +1212,7 @@
                     "Phase": "1",
                     "ItemName": "Orb of Power",
                     "ItemID": "4838",
-                    "ItemSuffixKey": "AH",
+                    "ItemSuffixKey": "",
                     "Source": "Sold by Veenix / Zixil / Kzixx (Stonetalon Mountains / Hillsbrad Foothills / Duskwood)",
                     "Slot": "off-hand"
                 },
@@ -3367,7 +3367,7 @@
                     "Phase": "1",
                     "ItemName": "Ring of Defense",
                     "ItemID": "12985",
-                    "ItemSuffixKey": "L",
+                    "ItemSuffixKey": "",
                     "Source": "Random World Drop (Auction House)",
                     "Slot": "finger"
                 },
@@ -6647,7 +6647,7 @@
                     "Phase": "1",
                     "ItemName": "Orb of Power",
                     "ItemID": "4838",
-                    "ItemSuffixKey": "AH",
+                    "ItemSuffixKey": "",
                     "Source": "Sold by various Merchants (Hillsbrad Foothills / Duskwood / Stonetalon Mountains)",
                     "Slot": "off-hand"
                 },
@@ -8817,7 +8817,7 @@
                     "Phase": "1",
                     "ItemName": "Orb of Power",
                     "ItemID": "4838",
-                    "ItemSuffixKey": "AH",
+                    "ItemSuffixKey": "",
                     "Source": "Sold by Various NPCs (Multiple Locations)",
                     "Slot": "off-hand"
                 },
@@ -14124,7 +14124,7 @@
                     "Phase": "1",
                     "ItemName": "Ring of Defense",
                     "ItemID": "12985",
-                    "ItemSuffixKey": "L",
+                    "ItemSuffixKey": "",
                     "Source": "Dropped by Various Mobs (World Drop)",
                     "Slot": "finger"
                 },
@@ -16034,7 +16034,7 @@
                     "Phase": "1",
                     "ItemName": "Orb of Power",
                     "ItemID": "4838",
-                    "ItemSuffixKey": "AH",
+                    "ItemSuffixKey": "",
                     "Source": "Vendors",
                     "Slot": "off-hand"
                 },
@@ -17306,7 +17306,7 @@
                     "Phase": "1",
                     "ItemName": "Ring of Defense",
                     "ItemID": "12985",
-                    "ItemSuffixKey": "L",
+                    "ItemSuffixKey": "",
                     "Source": "Drop",
                     "Slot": "finger"
                 },
@@ -17867,7 +17867,7 @@
                     "Phase": "1",
                     "ItemName": "Orb of Power",
                     "ItemID": "4838",
-                    "ItemSuffixKey": "AH",
+                    "ItemSuffixKey": "",
                     "Source": "Vendors",
                     "Slot": "off-hand"
                 },
