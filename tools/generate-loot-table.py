@@ -34,6 +34,7 @@ def main():
         logger.info("Processing wowhead data")
         for itemkey, itemname in wowhead_data["items"].items():
             itemid, itemsuffixkey = itemkey.split("|")
+            itembissuffixid = ""
             logger.info(f"Processing item {itemid} (SuffixID: {itemsuffixkey}) - {itemname}")
 
 
@@ -49,6 +50,7 @@ def main():
                     data_item_name = item["ItemName"]
                     data_item_id = item["ItemID"]
                     data_item_suffix_key = item["ItemSuffixKey"]
+                    data_item_bis_suffix_id = item["ItemBISSuffixID"]
                     data_item_rank = item["Rank"]
                     data_item_priority_text = item["PriorityText"]
                     data_item_priority_number = item["PriorityNumber"]
@@ -68,11 +70,18 @@ def main():
                             data_item_phase=data_item_phase
                         )
 
+                        if itembissuffixid == "":
+                            itembissuffixid = data_item_bis_suffix_id
+                        elif itembissuffixid != data_item_bis_suffix_id:
+                            logger.error(f"Item {itemid} has multiple BIS suffix IDs: {itembissuffixid} and {data_item_bis_suffix_id}")
+                            sys.exit(1)
+
             sectionsText = sectionsText + "}"
 
-            outputLine = "{{[\"itemid\"] = \"{itemid}\", [\"itemsuffixkey\"] = \"{itemsuffixkey}\", [\"sections\"] = {sections}}},\n".format(
+            outputLine = "{{[\"itemid\"] = \"{itemid}\", [\"itemsuffixkey\"] = \"{itemsuffixkey}\", [\"itembissuffixid\"] = \"{itembissuffixid}\", [\"sections\"] = {sections}}},\n".format(
                 itemid=itemid,
                 itemsuffixkey=itemsuffixkey,
+                itembissuffixid=itembissuffixid,
                 sections=sectionsText
             )
             f.write(outputLine)    

@@ -20,7 +20,10 @@ BISListTooltip.defaults = {
         ["PRIEST"] = true,
         ["WARLOCK"] = true,
         ["PALADIN"] = true
-    }
+    },
+
+    -- Show only BIS Suffixes
+    filterBISSuffixes = true
 }
 
 -- Options set by the initalization function if classOptionsSet is false
@@ -135,6 +138,26 @@ function BISListTooltip:InitializeOptions()
 
     local cb_phase_1 = self:CreateCheckbox("phase1", "Phase 1", self.panel_main)
     cb_phase_1:SetPoint("TOPLEFT", phase_label, 0, phase_y_offset)
+
+    -- BIS Suffix Filter Section - below the paladin checkbox
+    local bis_suffix_x_offset = 0
+    local bis_suffix_y_offset_header = -40
+    local bis_suffix_y_offset = -20
+
+    local bis_suffix_label = self.panel_main:CreateFontString( "BISSuffixLabel", "OVERLAY", "GameTooltipText" )
+    bis_suffix_label:SetPoint( "TOPLEFT", cb_display_paladin, bis_suffix_x_offset, bis_suffix_y_offset_header )
+    bis_suffix_label:SetTextColor( 1, 0.85, 0.15 )
+    bis_suffix_label:SetText( "Show only BIS suffixes" )
+
+    -- Info Header
+    local bis_suffix_info_header = self.panel_main:CreateFontString( "BISSuffixInfoHeader", "OVERLAY", "GameTooltipText" )
+    bis_suffix_info_header:SetPoint( "TOPLEFT", bis_suffix_label, 0, bis_suffix_y_offset )
+    bis_suffix_info_header:SetText( "Display only the best possible suffix rolls (random enchants)" )
+
+    local cb_bis_suffix_filter = self:CreateCheckbox("filterBISSuffixes", "Show only BIS suffixes", self.panel_main)
+    cb_bis_suffix_filter:SetPoint("TOPLEFT", bis_suffix_info_header, 0, bis_suffix_y_offset)
+
+
     
 
     -- Add to interface panel
