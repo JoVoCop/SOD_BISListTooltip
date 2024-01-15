@@ -29,6 +29,8 @@ BISListTooltip.classNames = {
     "PALADIN"
 }
 
+BISListTooltip.currentPhase = "1"
+
 function BISListTooltip:OnEvent(event, ...)
 	self[event](self, event, ...)
 end
@@ -186,6 +188,7 @@ function injectTooltip(tooltip)
                 -- Get the class color and icon
                 local color = RAID_CLASS_COLORS[class:upper()]
                 local icon = BISListTooltip.classIcons[class]
+                local phaseText = string.format("P%s", phase)
 
                 -- Confirm the phase and class are enabled
                 if BisListTooltipDB.displayClass[class:upper()] == false then
@@ -195,7 +198,12 @@ function injectTooltip(tooltip)
                 else
                     -- Add the line 
                     -- https://wowpedia.fandom.com/wiki/API_GameTooltip_AddDoubleLine
-                    tooltip:AddDoubleLine(string.format("%s %s %s", icon, class, spec), string.format("%s - %s", rank, priority_text), color.r, color.g, color.b, color.r, color.g, color.b)
+                    if phase == BISListTooltip.currentPhase then
+                        tooltip:AddDoubleLine(string.format("%s %s %s", icon, class, spec), string.format("%s - %s", rank, priority_text), color.r, color.g, color.b, color.r, color.g, color.b)
+                    else
+                        -- Display PX (where X is the phase number) if the phase is not the current phase
+                        tooltip:AddDoubleLine(string.format("%s: %s %s %s", phaseText, icon, class, spec), string.format("%s - %s", rank, priority_text), color.r, color.g, color.b, color.r, color.g, color.b)
+                    end
                 end
             end
         end
