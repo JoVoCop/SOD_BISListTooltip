@@ -75,6 +75,8 @@ function BISListTooltip:ADDON_LOADED(event, addOnName)
         ItemRefTooltip:HookScript("OnTooltipSetItem", injectTooltip)
         ShoppingTooltip1:HookScript("OnTooltipSetItem", injectTooltip)
         ShoppingTooltip2:HookScript("OnTooltipSetItem", injectTooltip)
+        ItemRefShoppingTooltip1:HookScript("OnTooltipSetItem", injectTooltip)
+        ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", injectTooltip)
 	end
 end
 
