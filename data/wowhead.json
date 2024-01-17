@@ -3347,9 +3347,21 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Best",
+                    "Rank": "Best (threat)",
                     "PriorityText": "1/4",
                     "PriorityNumber": 1,
+                    "Phase": "1",
+                    "ItemName": "Twilight Slayer's Tunic",
+                    "ItemID": "211512",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Lorgus Jett and Gelihast (Blackfathom Deeps)",
+                    "Slot": "chest"
+                },
+                {
+                    "Rank": "Best (survivability)",
+                    "PriorityText": "2/4",
+                    "PriorityNumber": 2,
                     "Phase": "1",
                     "ItemName": "Hydra Hide Cuirass",
                     "ItemID": "209687",
@@ -3360,8 +3372,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/4",
-                    "PriorityNumber": 2,
+                    "PriorityText": "3/4",
+                    "PriorityNumber": 3,
                     "Phase": "1",
                     "ItemName": "Black Boiled Leathers",
                     "ItemID": "209572",
@@ -3372,26 +3384,14 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "1",
                     "ItemName": "Clamweave Tunic",
                     "ItemID": "209675",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Drops from Ghamoo-ra (Blackfathom Deeps)",
-                    "Slot": "chest"
-                },
-                {
-                    "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
-                    "Phase": "1",
-                    "ItemName": "Twilight Slayer's Tunic",
-                    "ItemID": "211512",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "Drops from Lorgus Jett and Gelihast (Blackfathom Deeps)",
                     "Slot": "chest"
                 },
                 {
@@ -10799,6 +10799,18 @@
                     "PriorityText": "7/9",
                     "PriorityNumber": 7,
                     "Phase": "1",
+                    "ItemName": "Staff of Westfall",
+                    "ItemID": "2042",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "The Defias Brotherhood (The Deadmines)",
+                    "Slot": "main-hand"
+                },
+                {
+                    "Rank": "Great",
+                    "PriorityText": "8/9",
+                    "PriorityNumber": 8,
+                    "Phase": "1",
                     "ItemName": "Emberstone Staff",
                     "ItemID": "5201",
                     "ItemSuffixKey": "",
@@ -10808,26 +10820,14 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "8/9",
-                    "PriorityNumber": 8,
+                    "PriorityText": "9/9",
+                    "PriorityNumber": 9,
                     "Phase": "1",
                     "ItemName": "Twisted Chanter's Staff",
                     "ItemID": "890",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "World Drop (Azeroth)",
-                    "Slot": "main-hand"
-                },
-                {
-                    "Rank": "Good",
-                    "PriorityText": "9/9",
-                    "PriorityNumber": 9,
-                    "Phase": "1",
-                    "ItemName": "Staff of Westfall",
-                    "ItemID": "2042",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "The Defias Brotherhood (The Deadmines)",
                     "Slot": "main-hand"
                 },
                 {
