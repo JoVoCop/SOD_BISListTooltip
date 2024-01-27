@@ -11778,11 +11778,11 @@
                     "PriorityText": "5/9",
                     "PriorityNumber": 5,
                     "Phase": "1",
-                    "ItemName": "Cruel Barb",
-                    "ItemID": "5191",
+                    "ItemName": "Shadowfang",
+                    "ItemID": "1482",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Edwin VanCleef (The Deadmines)",
+                    "Source": "Zone Drop (Shadowfang Keep)",
                     "Slot": "main-hand"
                 },
                 {
@@ -11790,11 +11790,11 @@
                     "PriorityText": "6/9",
                     "PriorityNumber": 6,
                     "Phase": "1",
-                    "ItemName": "Shadowfang",
-                    "ItemID": "1482",
+                    "ItemName": "Cruel Barb",
+                    "ItemID": "5191",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Zone Drop (Shadowfang Keep)",
+                    "Source": "Edwin VanCleef (The Deadmines)",
                     "Slot": "main-hand"
                 },
                 {
