@@ -15,7 +15,7 @@ CWD = os.path.dirname(__file__)
 CHANGELOGS_PATH = os.path.join(CWD, "../changelogs")
 
 # Output
-OUTPUT_FILENAME = os.path.join(CWD, "../curseforge.md.tmp")
+OUTPUT_FILENAME = os.path.join(CWD, "../output/curseforge-changelog.md")
 
 @logger.catch
 def main():

@@ -41,7 +41,24 @@ jobs:
         cd output
         
         # Zip the output directory
-        zip -r SOD_BISListTooltip-${{ steps.gen_tag.outputs.new_tag }}.zip SOD_BISListTooltip 
+        zip -r SOD_BISListTooltip-${{ steps.gen_tag.outputs.new_tag }}.zip SOD_BISListTooltip
+
+    - name: setup python
+      if: steps.gen_tag.outputs.new_tag != steps.gen_tag.outputs.old_tag
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' # install the python version needed
+
+    - name: install python packages
+      if: steps.gen_tag.outputs.new_tag != steps.gen_tag.outputs.old_tag
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r tools/requirements-curseforge.txt
+
+    - name: Run generate-curseforge-changelog.py
+      if: steps.gen_tag.outputs.new_tag != steps.gen_tag.outputs.old_tag
+      run: |
+        python tools/generate-curseforge-changelog.py
 
     - name: Release
       if: steps.gen_tag.outputs.new_tag != steps.gen_tag.outputs.old_tag
@@ -50,5 +67,6 @@ jobs:
       run: >-
         gh release create ${{ steps.gen_tag.outputs.new_tag }}
         "output/SOD_BISListTooltip-${{ steps.gen_tag.outputs.new_tag }}.zip"
+        "output/curseforge-changelog.md"
         -F changelogs/${{ steps.gen_tag.outputs.new_tag }}.md
         --title "${{ steps.gen_tag.outputs.new_tag }}"
