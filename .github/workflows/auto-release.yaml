@@ -1,11 +1,9 @@
 name: Auto Release
 
 on:
-  # Allow manual trigger
+  # Allow manual trigger.
+  # In case of manual tag, we can create a release manually with this automation
   workflow_dispatch:
-  push:
-    tags:
-      - "v*"
 
 jobs:
   release:

@@ -1,0 +1,54 @@
+# on merge to master from pull request
+name: Auto tag and release
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  tag:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.merge_commit_sha }}
+        fetch-depth: '0'
+
+    - name: Bump version and push tag
+      id: gen_tag
+      uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+        WITH_V: true
+        BRANCH_HISTORY: last
+
+    - name: Create output build
+      if: steps.gen_tag.outputs.new_tag != steps.gen_tag.outputs.old_tag
+      run: |
+        # Create a new 'output' directory
+        mkdir -p output/SOD_BISListTooltip
+
+        # Copy the files we want to include in the release
+        cp -r *.lua *.toc output/SOD_BISListTooltip
+
+        # cd into the output directory
+        cd output
+        
+        # Zip the output directory
+        zip -r SOD_BISListTooltip-${{ steps.gen_tag.outputs.new_tag }}.zip SOD_BISListTooltip 
+
+    - name: Release
+      if: steps.gen_tag.outputs.new_tag != steps.gen_tag.outputs.old_tag
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: >-
+        gh release create ${{ steps.gen_tag.outputs.new_tag }}
+        "output/SOD_BISListTooltip-${{ steps.gen_tag.outputs.new_tag }}.zip"
+        -F changelogs/${{ steps.gen_tag.outputs.new_tag }}.md
+        --title "${{ steps.gen_tag.outputs.new_tag }}"
