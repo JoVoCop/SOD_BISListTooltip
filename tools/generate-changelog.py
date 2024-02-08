@@ -126,6 +126,8 @@ def main():
                 # Summary in format "Page - Key: OldValue -> NewValue"
                 summary = f"Numerous changes"
 
+                # TODO: Find a way to summarize the changes in a page in a nice way
+
                 changed_items[old_page] = [summary]
 
             elif isinstance(item_changed.up.t1, dict):
