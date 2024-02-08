@@ -62,7 +62,7 @@ def main():
 
     # Main diff logic
 
-    differences = DeepDiff(wowhead_data_old, wowhead_data_new, ignore_order=True, view='tree')
+    differences = DeepDiff(wowhead_data_old["pages"], wowhead_data_new["pages"], ignore_order=True, view='tree')
     
     
     # Added items format:
@@ -112,37 +112,61 @@ def main():
 
     # Get changed items if they exist
     if "values_changed" in differences:
+        print("CHANGED")
         for item_changed in differences["values_changed"]:
             pprint(item_changed.up.t1)
-            old_item_name = item_changed.up.t1["ItemName"]
-            old_item_id = item_changed.up.t1["ItemID"]
-            old_page = item_changed.up.up.up.t1["list"]
-            print(old_page)
-            changed_key = item_changed.path(output_format="list")[-1:]
-            item_key = f"{old_item_name} (ItemID: `{old_item_id}`)"
-            old_value = item_changed.t1
-            new_value = item_changed.t2
 
-            # Convert changed_key from list to string
-            changed_key = "".join(changed_key)
+            # Check if item_changed.up.t1 is a list or dict
+            # If it's a list, it means the change is large for the page
+            # If it's a dict, it means the change is for a specific item
+            if isinstance(item_changed.up.t1, list):
+                print("Large change to a page. Summarizing page changes.")
+                old_page = item_changed.up.up.t1["list"]
 
-            if changed_key[:2] == "['":
-                changed_key = changed_key[2:] 
-            if changed_key[-2:] == "']":
-                changed_key = changed_key[:-2]
-            
+                # Summary in format "Page - Key: OldValue -> NewValue"
+                summary = f"Numerous changes"
 
-            # Ignore changes to PriorityText
-            if changed_key == "PriorityText":
-                continue
+                changed_items[old_page] = [summary]
 
-            # Summary in format "Page - Key: OldValue -> NewValue"
-            summary = f"{old_page} - `{changed_key}: {old_value} -> {new_value}`"
+            elif isinstance(item_changed.up.t1, dict):
+                print("Small change to a single item. Getting item specific changes")
+                # Small change to a single item
+                old_item_name = item_changed.up.t1["ItemName"]
+                old_item_id = item_changed.up.t1["ItemID"]
+                old_page = item_changed.up.up.up.t1["list"]
+                print(f"Old Page: {old_page}")
+                
+                
+                changed_key = item_changed.path(output_format="list")[-1:]
+                print(changed_key)
+                item_key = f"{old_item_name} (ItemID: `{old_item_id}`)"
+                old_value = item_changed.t1
+                new_value = item_changed.t2
 
-            if item_key in changed_items:
-                changed_items[item_key].append(summary)
+                # Convert changed_key from list to string
+                changed_key = "".join(changed_key)
+
+                if changed_key[:2] == "['":
+                    changed_key = changed_key[2:] 
+                if changed_key[-2:] == "']":
+                    changed_key = changed_key[:-2]
+                
+
+                # Ignore changes to PriorityText
+                if changed_key == "PriorityText":
+                    continue
+
+                # Summary in format "Page - Key: OldValue -> NewValue"
+                summary = f"{old_page} - `{changed_key}: {old_value} -> {new_value}`"
+
+                if item_key in changed_items:
+                    changed_items[item_key].append(summary)
+                else:
+                    changed_items[item_key] = [summary]
             else:
-                changed_items[item_key] = [summary]
+                print("UNKNOWN CHANGE")
+                raise Exception(f"Unknown change type: {type(item_changed.up.t1)}")
+
             
 
             
