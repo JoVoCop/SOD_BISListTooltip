@@ -257,6 +257,7 @@ WOW_SLOT_ALIASES = {
     "weapon": "two-hand",
     "two-handed": "two-hand",
     "duel-wield": "one-hand",
+    "dual-wield": "one-hand",
     "wand": "ranged",
     "wands": "ranged",
     "idol": "relic",
