@@ -1,5 +1,5 @@
 ## Interface: 11500
-## Version: 1.2.0
+## Version: 1.3.0
 ## Title: SOD BIS List Tooltip
 ## Notes: BIS List Tooltip for SoD
 ## Author: Jovo
