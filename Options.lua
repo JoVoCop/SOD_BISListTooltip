@@ -2,7 +2,8 @@ BISListTooltip.defaults = {
 	sessions = 0,
 
     -- Phases
-    phase1 = true,
+    phase1 = false,
+    phase2 = true,
 
     -- Data Sources
     datasouceWowhead = true,
@@ -138,6 +139,9 @@ function BISListTooltip:InitializeOptions()
 
     local cb_phase_1 = self:CreateCheckbox("phase1", "Phase 1", self.panel_main)
     cb_phase_1:SetPoint("TOPLEFT", phase_label, 0, phase_y_offset)
+
+    local cb_phase_2 = self:CreateCheckbox("phase2", "Phase 2", self.panel_main)
+    cb_phase_2:SetPoint("TOPLEFT", cb_phase_1, 0, phase_y_offset)
 
     -- BIS Suffix Filter Section - below the paladin checkbox
     local bis_suffix_x_offset = 0

@@ -8,7 +8,17 @@ from loguru import logger
 CWD = os.path.dirname(__file__)
 
 # Input
-WOWHEAD_DATA_PATH = os.path.join(CWD, "../data/wowhead.json")
+WOWHEAD_DATA_FILES = [
+    {
+        "phase:": "1",
+        "path": os.path.join(CWD, "../data/wowhead-p1.json"),
+    },
+    {
+        "phase:": "2",
+        "path": os.path.join(CWD, "../data/wowhead.json"),
+    }
+]
+
 
 # Output
 OUTPUT_FILENAME = os.path.join(CWD, "../WowheadLootTable.lua")
@@ -17,14 +27,26 @@ OUTPUT_FILENAME = os.path.join(CWD, "../WowheadLootTable.lua")
 def main():
     logger.info("Starting...")
 
-    # Read WOWHEAD_DATA_PATH file as json
-    logger.info(f"Reading wowhead data at {WOWHEAD_DATA_PATH}")
-    with open(WOWHEAD_DATA_PATH, 'r') as f:
-        wowhead_data = json.load(f)
+    # Read data and combine into one dict
+    wowhead_data = {
+        "items": {},
+        "pages": []
+    }
 
-    if wowhead_data is None:
-        logger.error("Failed to read WOWHEAD_DATA_PATH")
-        sys.exit(1)
+    for file in WOWHEAD_DATA_FILES:
+        logger.info(f"Reading wowhead data at {file['path']}")
+        with open(file["path"], 'r') as f:
+            data = json.load(f)
+
+        if data is None:
+            logger.error(f"Failed to read wowhead data at {file['path']}")
+            sys.exit(1)
+
+        # Merge items
+        wowhead_data["items"].update(data["items"])
+
+        # Merge pages
+        wowhead_data["pages"].extend(data["pages"])
 
     logger.info(f"Writing loot table to {OUTPUT_FILENAME}")    
     with open(OUTPUT_FILENAME, "w") as f:

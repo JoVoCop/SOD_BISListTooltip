@@ -29,7 +29,7 @@ BISListTooltip.classNames = {
     "PALADIN"
 }
 
-BISListTooltip.currentPhase = "1"
+BISListTooltip.currentPhase = "2"
 
 function BISListTooltip:OnEvent(event, ...)
 	self[event](self, event, ...)
@@ -43,6 +43,11 @@ function BISListTooltip:ADDON_LOADED(event, addOnName)
 		BisListTooltipDB = BisListTooltipDB or {}
 		self.db = BisListTooltipDB
 		for k, v in pairs(self.defaults) do
+            -- Special handling for enabling Phase2. If phase2 is not set (not true or false yet), set it to true and set phase1 to false
+            if k == "phase2" and self.db[k] == nil then
+                self.db[k] = true
+                self.db["phase1"] = false
+            end
 			if self.db[k] == nil then
 				self.db[k] = v
 			end
@@ -194,6 +199,8 @@ function injectTooltip(tooltip)
                 if BisListTooltipDB.displayClass[class:upper()] == false then
                     -- Nothing
                 elseif phase == "1" and BisListTooltipDB.phase1 == false then
+                    -- Nothing
+                elseif phase == "2" and BisListTooltipDB.phase2 == false then
                     -- Nothing
                 else
                     -- Add the line 

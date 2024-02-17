@@ -29,29 +29,29 @@ WOWHEAD_URLS = [
         "class": "Druid",
         "spec": "Balance DPS",
         "list": "Druid Balance DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/balance/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/balance/dps-bis-gear-pve"
     },
     {
         "class": "Druid",
         "spec": "Feral DPS",
         "list": "Druid Feral DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/feral/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/feral/dps-bis-gear-pve"
     },
     {
         "class": "Druid",
         "spec": "Healer",
         "list": "Druid Healer",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/healer-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/healer-bis-gear-pve"
     },
     {
         "class": "Druid",
         "spec": "Tank",
         "list": "Druid Tank",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/tank-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/druid/tank-bis-gear-pve"
     },
     
     # Hunter
@@ -59,8 +59,8 @@ WOWHEAD_URLS = [
         "class": "Hunter",
         "spec": "DPS",
         "list": "Hunter DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/hunter/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/hunter/dps-bis-gear-pve"
     },
     
     # Mage
@@ -68,15 +68,15 @@ WOWHEAD_URLS = [
         "class": "Mage",
         "spec": "DPS",
         "list": "Mage DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/mage/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/mage/dps-bis-gear-pve"
     },
     {
         "class": "Mage",
         "spec": "Healer",
         "list": "Mage Healer",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/mage/healer-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/mage/healer-bis-gear-pve"
     },
     
     # Paladin
@@ -84,25 +84,26 @@ WOWHEAD_URLS = [
         "class": "Paladin",
         "spec": "DPS",
         "list": "Paladin DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/dps-bis-gear-pve"
     },
     {
         "class": "Paladin",
         "spec": "Healer",
         "list": "Paladin Healer",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/healer-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/healer-bis-gear-pve"
     },
     {
         "class": "Paladin",
         "spec": "Tank",
         "list": "Paladin Tank",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/tank-bis-gear-pve-phase-1",
-        "custom_behaviors": {
-            "suffix_from_column_text": True # The Paladin Tank list has a number of world drop items in a single row. These all have the same suffix. We need to use the text in the column to determine the suffix rather than from the item link.
-        }
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/paladin/tank-bis-gear-pve"
+        # Old P1 setting...
+        # "custom_behaviors": {
+        #     "suffix_from_column_text": True # The Paladin Tank list has a number of world drop items in a single row. These all have the same suffix. We need to use the text in the column to determine the suffix rather than from the item link.
+        # }
     },
     
     # Priest
@@ -110,15 +111,15 @@ WOWHEAD_URLS = [
         "class": "Priest",
         "spec": "DPS",
         "list": "Priest DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/priest/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/priest/dps-bis-gear-pve"
     },
     {
         "class": "Priest",
         "spec": "Healer",
         "list": "Priest Healer",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/priest/healer-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/priest/healer-bis-gear-pve"
     },
     
     # Rogue
@@ -126,15 +127,15 @@ WOWHEAD_URLS = [
         "class": "Rogue",
         "spec": "DPS",
         "list": "Rogue DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/rogue/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/rogue/dps-bis-gear-pve"
     },
     {
         "class": "Rogue",
         "spec": "Tank",
         "list": "Rogue Tank",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/rogue/tank-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/rogue/tank-bis-gear-pve"
     },
     
     # Shaman
@@ -142,29 +143,29 @@ WOWHEAD_URLS = [
         "class": "Shaman",
         "spec": "Elemental DPS",
         "list": "Shaman Elemental DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/elemental/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/elemental/dps-bis-gear-pve"
     },
     {
         "class": "Shaman",
         "spec": "Enhancement DPS",
         "list": "Shaman Enhancement DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/enhancement/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/enhancement/dps-bis-gear-pve"
     },
     {
         "class": "Shaman",
         "spec": "Healer",
         "list": "Shaman Healer",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/healer-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/healer-bis-gear-pve"
     },
     {
         "class": "Shaman",
         "spec": "Tank",
         "list": "Shaman Tank",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/tank-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/shaman/tank-bis-gear-pve"
     },
     
     # Warlock
@@ -172,15 +173,15 @@ WOWHEAD_URLS = [
         "class": "Warlock",
         "spec": "DPS",
         "list": "Warlock DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warlock/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warlock/dps-bis-gear-pve"
     },
     {
         "class": "Warlock",
         "spec": "Tank",
         "list": "Warlock Tank",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warlock/tank-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warlock/tank-bis-gear-pve"
     },
     
     # Warrior
@@ -188,15 +189,15 @@ WOWHEAD_URLS = [
         "class": "Warrior",
         "spec": "DPS",
         "list": "Warrior DPS",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warrior/dps-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warrior/dps-bis-gear-pve"
     },
     {
         "class": "Warrior",
         "spec": "Tank",
         "list": "Warrior Tank",
-        "phase": "1",
-        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warrior/tank-bis-gear-pve-phase-1"
+        "phase": "2",
+        "url": "https://www.wowhead.com/classic/guide/season-of-discovery/classes/warrior/tank-bis-gear-pve"
     },
 ]
 WOWHEAD_ITEM_URL_PREFIX = "https://classic.wowhead.com/item="
@@ -256,6 +257,9 @@ WOW_SLOT_ALIASES = {
     "staff": "two-hand",
     "weapon": "two-hand",
     "two-handed": "two-hand",
+    "two-hander": "two-hand",
+    "weapon-single-target": "two-hand", # Paladin P2 header. I honestly forget why I even track slots so putting in this hack for now. Could likely clean this up and/or add exceptions per page
+    "weapon-cleave": "two-hand", # Same as above (Palandin DPS P2)
     "duel-wield": "one-hand",
     "dual-wield": "one-hand",
     "wand": "ranged",
@@ -308,6 +312,7 @@ class Item:
         return self.name
     
     def set_name(self, name: str) -> None:
+        name = name.replace("\n", "")
         logger.debug(f"Setting name to \"{name}\"")
         self.name = name
 
@@ -315,12 +320,14 @@ class Item:
         return self.id
     
     def set_id(self, id: str) -> None:
+        id = id.replace("\n", "")
         self.id = id
 
     def get_key(self) -> str:
         return self.key
     
     def set_key(self, key: str) -> None:
+        key = key.replace("\n", "")
         logger.debug(f"Setting key to \"{key}\"")
         self.key = key
 
@@ -328,24 +335,29 @@ class Item:
         return self.source
     
     def set_source(self, source: str) -> None:
+        source = source.replace("\n", "")
         self.source = source
 
     def get_rank(self) -> str:
         return self.rank
     
     def set_rank(self, rank: str) -> None:    
+        # Remove any newline characters
+        rank = rank.replace("\n", "")
         self.rank = rank
 
     def get_suffixkey(self) -> str:
         return self.suffixkey
     
     def set_suffixkey(self, suffixkey: str) -> None:
+        suffixkey = suffixkey.replace("\n", "")
         self.suffixkey = suffixkey
 
     def get_prioritytext(self) -> str:
         return self.prioritytext
     
     def set_prioritytext(self, prioritytext: str) -> None:
+        prioritytext = prioritytext.replace("\n", "")
         self.prioritytext = prioritytext
 
     def get_prioritynumber(self) -> int:
@@ -1028,15 +1040,20 @@ def parse_wowhead_url(browser: webdriver, item_browser: webdriver, url: str, lis
                         if len(icons) > 0:
                             icon = icons[0]
                         if icon:
-                            logger.debug(f"Found icon {icon.get_attribute('style')}")
+                            style = icon.get_attribute("style")
+                            logger.debug(f"Found icon {style}")
+                            if style is not None and style.strip() != "":
+                                icon_image = style.split("url(\"")[1].split("\"")[0].split("/")[-1]
 
-                            icon_image = icon.get_attribute("style").split("url(\"")[1].split("\"")[0].split("/")[-1]
-
-                            if icon_image in WOWHEAD_IMAGE_TO_SPEC:
-                                item.set_rank(column.text.strip() + f" ({WOWHEAD_IMAGE_TO_SPEC[icon_image]})")
+                                if icon_image in WOWHEAD_IMAGE_TO_SPEC:
+                                    item.set_rank(column.text.strip() + f" ({WOWHEAD_IMAGE_TO_SPEC[icon_image]})")
+                                else:
+                                    page.add_error(f"Unknown icon image {icon_image}")
+                                    item.set_rank(column.text.strip() + f" ({icon_image})")
                             else:
-                                page.add_error(f"Unknown icon image {icon_image}")
-                                item.set_rank(column.text.strip() + f" ({icon_image})")
+                                # No style attribute
+                                page.add_warning(f"No style attribute for icon in row {row_current} in page {page.get_name()}")
+                                item.set_rank(column.text.strip())
                         else:
                             item.set_rank(column.text.strip())
 
