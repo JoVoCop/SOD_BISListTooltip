@@ -2,8 +2,10 @@
     "items": {
         "215381|": "Gneuro-Conductive Channeler's Hood",
         "215111|": "Gneuro-Linked Arcano-Filament Monocle",
+        "211842|": "Rakkamar's Tattered Thinking Cap",
         "8214|": "Wild Leather Helmet",
         "213301|": "Synthetic Mantle",
+        "19507|": "Inquisitor's Shawl",
         "9912|": "Royal Amice",
         "216620|": "Bloodrot Cloak",
         "213306|": "Ingenuity's Cover",
@@ -18,6 +20,7 @@
         "213321|": "Volatile Concoction Belt",
         "4329|": "Star Belt",
         "213331|": "Insulated Leggings",
+        "10009|": "Red Mageweave Pants",
         "15168|": "Imposing Pants",
         "209684|": "Soul Leech Pants",
         "215378|": "Irradiated Boots",
@@ -99,10 +102,8 @@
         "209576|": "Mind-Expanding Mushroom",
         "213281|": "Electromagnetic Hyperflux Reactivator",
         "217300|": "Whitemane's Chapeau",
-        "211842|": "Rakkamar's Tattered Thinking Cap",
         "2721|": "Holy Shroud",
         "213413|": "Generously Padded Shoulderpads",
-        "19507|": "Inquisitor's Shawl",
         "217250|": "Crimson Silk Shoulders",
         "13115|": "Sheepshear Mantle",
         "216623|": "Cape of Hemostasis",
@@ -123,7 +124,6 @@
         "215379|": "Irradiated Trousers",
         "213329|": "Hyperconductive Skirt",
         "213328|": "Hyperconductive Pantaloons",
-        "10009|": "Red Mageweave Pants",
         "217303|": "Stoneweaver Leggings",
         "213336|": "Hyperconductive Walkers",
         "213337|": "Hyperconductive Sandals",
@@ -245,6 +245,7 @@
         "9517|": "Celestial Stave",
         "1613|W": "Spiritchaser Staff of Fiery Wrath",
         "1613|V": "Spiritchaser Staff of Arcane Wrath",
+        "7757|": "Windweaver Staff",
         "217497|": "Narpas Sword",
         "3187|W": "Sacrificial Kris of Fiery Wrath",
         "3187|V": "Sacrificial Kris of Arcane Wrath",
@@ -261,10 +262,12 @@
         "217287|": "Greater Mystic Wand",
         "215161|": "Tempered Interference-Negating Helmet",
         "7719|": "Raging Berserker's Helm",
+        "211505|": "Twilight Avenger's Helm",
         "213305|": "Machined Alloy Shoulderplates",
         "216621|": "Blooddrenched Drape",
         "213316|": "H.A.Z.A.R.D. Breastplate",
         "11195|": "Warforged Chestplate",
+        "211504|": "Twilight Avenger's Chain (3-set)",
         "19581|": "Berserker Bracers",
         "9409|AH": "Ironaya's Bracers of Power(+22 Attack Power)",
         "10094|H": "Gothic Plate Vambraces of the Tiger(+6-7 Strength &amp; Agility)",
@@ -280,6 +283,7 @@
         "213330|": "H.A.Z.A.R.D. Legplates",
         "10740|": "Centurion Legplates",
         "9637|": "Shinkicker Boots",
+        "211506|": "Twilight Avenger's Boots",
         "10089|H": "Gothic Sabatons of the Tiger(+8-9 Strength &amp; Agility)",
         "213335|": "H.A.Z.A.R.D. Boots",
         "20128|": "Highlander's Plate Greaves",
@@ -294,9 +298,11 @@
         "1982|": "Nightblade",
         "870|": "Fiery War Axe",
         "213416|": "Thermaplugg's Rocket Cleaver",
-        "216506|": "Bloodlight Avenger's Edge",
+        "213296|": "Supercharged Headchopper",
         "13051|": "Witchfury",
+        "213292|": "Gizmotron Gigachopper",
         "217302|": "Mograine's Might",
+        "216506|": "Bloodlight Avenger's Edge",
         "9425|": "Pendulum of Doom",
         "7717|": "Ravager",
         "6830|": "Bonebiter",
@@ -336,6 +342,7 @@
         "10330|": "Scarlet Leggings",
         "20110|": "Highlander's Lamellar Greaves",
         "13068|": "Obsidian Greaves",
+        "213294|": "Caverndeep Sabatons",
         "217306|": "Revelosh's Boots",
         "14839|": "Tyrant's Greaves",
         "213343|": "Justice Badge",
@@ -390,9 +397,10 @@
         "10574|": "Corpseshroud",
         "12998|": "Magician's Mantle",
         "211468|": "Frayed Chestnut Mantle",
+        "4197|": "Berylline Pads",
         "209679|": "Azshari Novice's Shoulderpads",
-        "209423|": "Flowing Scarf",
         "19528|": "Battle Healer's Cloak",
+        "209423|": "Flowing Scarf",
         "209671|": "Twilight Invoker's Robes",
         "216702|": "Sergeant Major's Silk Cuffs",
         "11469|": "Bloodband Bracers",
@@ -416,6 +424,7 @@
         "209570|": "Tome of Cavern Lore",
         "13064|": "Jaina's Firestarter",
         "209674|": "Phoenix Ignition",
+        "5216|AF": "Umbral Wand of Healing",
         "7755|": "Flintrock Shoulders",
         "7534|AH": "Cabalist Bracers of Power +20",
         "19508|": "Branded Leather Bracers",
@@ -451,10 +460,12 @@
         "15162|F": "Imposing Boots of the Monkey +9+9",
         "12012|F": "Marsh Ring of the Monkey+7+7",
         "19024|": "Arena Grand Master",
+        "213279|": "Reflective Skullcap",
         "211507|": "Twilight Elementalist's Cowl",
         "213303|": "Lightning Rod Spaulders",
         "213315|": "Electromantic Chainshirt",
         "211509|": "Twilight Elementalist's Robe",
+        "212996|": "Lightningcaller's Bindings",
         "209578|": "Glowing Leather Bands",
         "1974|": "Mindthrust Bracers",
         "4036|": "Silver-thread Cuffs",
@@ -489,6 +500,8 @@
         "10744|": "Axe of the Ebon Drake",
         "1602|": "Sickle Axe",
         "9427|": "Stonevault Bonebreaker",
+        "9359|": "Southsea Lamp",
+        "212997|": "Tidecaller's Bindings",
         "7049|": "Truefaith Gloves",
         "209559|": "Twilight Sage's Walking Stick",
         "215382|": "Rad-Resistant Scale Hood",
@@ -559,11 +572,9 @@
         "2879|": "Antipodean Rod",
         "6898|": "Orb of Soran'ruk",
         "9429|": "Miner's Hat of the Deep",
-        "4197|": "Berylline Pads",
         "13103|": "Pads of the Venom Spider",
         "18440|": "Sergeant's Cape",
         "18427|": "Sergeant's Cloak",
-        "23178|": "Mantle of Lady Falther'ess",
         "20219|": "Tattered Hakkari Cape",
         "209675|": "Clamweave Tunic",
         "6900|": "Enchanted Gold Bloodrobe",
@@ -584,13 +595,10 @@
         "7673|": "Talvash's Enhancing Necklace",
         "12985|": "Ring of Defense",
         "12252|": "Staff of Protection",
-        "23177|": "Lady Falther'ess' Finger",
         "8142|": "Chromite Barbute",
-        "211505|": "Twilight Avenger's Helm",
         "16336|": "Sergeant Major's Cape",
         "4438|": "Pugilist Bracers",
         "6460|": "Cobrahn's Grasp",
-        "211506|": "Twilight Avenger's Boots",
         "211467|": "Band of the Iron Fist",
         "20429|": "Legionnaire's Band",
         "20439|": "Protector's Band",
@@ -608,7 +616,6 @@
         "10088|F": "Gothic Plate Girdle of the Monkey",
         "20206|": "Defiler's Plate Girdle",
         "14945|F": "Warbringer's Legguards of the Monkey",
-        "213294|": "Caverndeep Sabatons",
         "14549|": "Boots of Avoidance",
         "20209|": "Defiler's Plate Greaves",
         "19564|": "Outrunner's Bow",
@@ -622,7 +629,7 @@
             "contents": [
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Gneuro-Conductive Channeler's Hood",
@@ -634,7 +641,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Gneuro-Linked Arcano-Filament Monocle",
@@ -646,8 +653,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
+                    "PriorityText": "3/4",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Rakkamar's Tattered Thinking Cap",
+                    "ItemID": "211842",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Lady Sarevess (Blackfathom Deeps)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Wild Leather Helmet",
                     "ItemID": "8214",
@@ -658,7 +677,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/2",
+                    "PriorityText": "1/3",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Synthetic Mantle",
@@ -670,8 +689,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/2",
+                    "PriorityText": "2/3",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Inquisitor's Shawl",
+                    "ItemID": "19507",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Fairbanks (Scarlet Monastery)",
+                    "Slot": "shoulders"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/3",
+                    "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Royal Amice",
                     "ItemID": "9912",
@@ -777,7 +808,7 @@
                     "Slot": "wrist"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Optional",
                     "PriorityText": "3/3",
                     "PriorityNumber": 3,
                     "Phase": "2",
@@ -826,7 +857,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Insulated Leggings",
@@ -838,8 +869,20 @@
                 },
                 {
                     "Rank": "Optional",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Red Mageweave Pants",
+                    "ItemID": "10009",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Tailoring (Crafted BOE)",
+                    "Slot": "legs"
+                },
+                {
+                    "Rank": "Optional",
+                    "PriorityText": "3/4",
+                    "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Imposing Pants",
                     "ItemID": "15168",
@@ -850,8 +893,8 @@
                 },
                 {
                     "Rank": "Optional",
-                    "PriorityText": "3/3",
-                    "PriorityNumber": 3,
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Soul Leech Pants",
                     "ItemID": "209684",
@@ -873,7 +916,7 @@
                     "Slot": "feet"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best",
                     "PriorityText": "2/3",
                     "PriorityNumber": 2,
                     "Phase": "2",
@@ -5109,7 +5152,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/8",
+                    "PriorityText": "1/9",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Rod of the Ancient Sleepwalker",
@@ -5121,7 +5164,7 @@
                 },
                 {
                     "Rank": "Best - Arcane",
-                    "PriorityText": "2/8",
+                    "PriorityText": "2/9",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Defibrillating Staff",
@@ -5133,7 +5176,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "3/8",
+                    "PriorityText": "3/9",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Staff of Jordan",
@@ -5145,19 +5188,19 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "4/8",
+                    "PriorityText": "4/9",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Staff of the Evil Genius",
                     "ItemID": "213354",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Electrocutioner 6000 (The Deadmines)",
+                    "Source": "Electrocutioner 6000 (Gnomeregan)",
                     "Slot": "main-hand"
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/8",
+                    "PriorityText": "5/9",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Celestial Stave",
@@ -5169,7 +5212,7 @@
                 },
                 {
                     "Rank": "Good - Fire",
-                    "PriorityText": "6/8",
+                    "PriorityText": "6/9",
                     "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Spiritchaser Staff of Fiery Wrath",
@@ -5181,7 +5224,7 @@
                 },
                 {
                     "Rank": "Good - Arcane",
-                    "PriorityText": "7/8",
+                    "PriorityText": "7/9",
                     "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Spiritchaser Staff of Arcane Wrath",
@@ -5192,9 +5235,21 @@
                     "Slot": "main-hand"
                 },
                 {
-                    "Rank": "Optional",
-                    "PriorityText": "8/8",
+                    "Rank": "Optional - Arcane",
+                    "PriorityText": "8/9",
                     "PriorityNumber": 8,
+                    "Phase": "2",
+                    "ItemName": "Windweaver Staff",
+                    "ItemID": "7757",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "BoE (Scarlet Monastery or Auction House)",
+                    "Slot": "main-hand"
+                },
+                {
+                    "Rank": "Optional",
+                    "PriorityText": "9/9",
+                    "PriorityNumber": 9,
                     "Phase": "2",
                     "ItemName": "Illusionary Rod",
                     "ItemID": "217299",
@@ -6119,7 +6174,7 @@
                     "ItemID": "213354",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Electrocutioner 6000 (The Deadmines)",
+                    "Source": "Electrocutioner 6000 (Gnomeregan)",
                     "Slot": "main-hand"
                 },
                 {
@@ -6323,7 +6378,7 @@
             "contents": [
                 {
                     "Rank": "#1 - Best: BS",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Tempered Interference-Negating Helmet",
@@ -6335,7 +6390,7 @@
                 },
                 {
                     "Rank": "#2 - Best: LW",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Glowing Gneuro-Linked Cowl",
@@ -6347,7 +6402,7 @@
                 },
                 {
                     "Rank": "#3 - Pre-Raid",
-                    "PriorityText": "3/3",
+                    "PriorityText": "3/4",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Raging Berserker's Helm",
@@ -6355,6 +6410,18 @@
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Drops from Herod (Scarlet Monastery - Armory)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "#3 - Pre-Raid",
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Twilight Avenger's Helm (3-set)",
+                    "ItemID": "211505",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Multiple Bosses (Blackfathom Deeps)",
                     "Slot": "head"
                 },
                 {
@@ -6406,7 +6473,7 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "#1 - Best",
+                    "Rank": "#2 - Pre-Raid",
                     "PriorityText": "2/3",
                     "PriorityNumber": 2,
                     "Phase": "2",
@@ -6418,7 +6485,7 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "#2 - Good",
+                    "Rank": "#3 - Good",
                     "PriorityText": "3/3",
                     "PriorityNumber": 3,
                     "Phase": "2",
@@ -6431,7 +6498,7 @@
                 },
                 {
                     "Rank": "#1 - Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Insulated Chestguard",
@@ -6443,7 +6510,7 @@
                 },
                 {
                     "Rank": "#2 - Near Best",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Electromantic Chainmail",
@@ -6455,7 +6522,7 @@
                 },
                 {
                     "Rank": "#3 - Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/5",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "H.A.Z.A.R.D. Breastplate",
@@ -6467,7 +6534,7 @@
                 },
                 {
                     "Rank": "#4 - Pre-Raid",
-                    "PriorityText": "4/4",
+                    "PriorityText": "4/5",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Warforged Chestplate",
@@ -6475,6 +6542,18 @@
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Reward from Tremors of the Earth (Badlands)",
+                    "Slot": "chest"
+                },
+                {
+                    "Rank": "#4 - Pre-Raid",
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Twilight Avenger's Chain (3-set)",
+                    "ItemID": "211504",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Multiple Bosses (Blackfathom Deeps)",
                     "Slot": "chest"
                 },
                 {
@@ -6551,7 +6630,7 @@
                 },
                 {
                     "Rank": "#1 - Best: Mechanical",
-                    "PriorityText": "1/6",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Machinist's Gloves",
@@ -6563,7 +6642,7 @@
                 },
                 {
                     "Rank": "#1 - Best: Non-Mech",
-                    "PriorityText": "2/6",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Grubbis Grubby Gauntlets",
@@ -6575,7 +6654,7 @@
                 },
                 {
                     "Rank": "#2 - Pre-Raid: LW",
-                    "PriorityText": "3/6",
+                    "PriorityText": "3/7",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Void-Touched Leather Gloves",
@@ -6586,9 +6665,21 @@
                     "Slot": "hands"
                 },
                 {
-                    "Rank": "#3 - Pre-Raid",
-                    "PriorityText": "4/6",
+                    "Rank": "#3 - Very Good",
+                    "PriorityText": "4/7",
                     "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Fingers of Arcane Accuracy",
+                    "ItemID": "213320",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from STX-04/BD (Gnomeregan)",
+                    "Slot": "hands"
+                },
+                {
+                    "Rank": "#3 - Pre-Raid",
+                    "PriorityText": "5/7",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Gloves of Holy Might",
                     "ItemID": "867",
@@ -6599,8 +6690,8 @@
                 },
                 {
                     "Rank": "#4 - Good",
-                    "PriorityText": "5/6",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/7",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Cragfists of the Tiger(+10-11 Strength &amp; Agility)",
                     "ItemID": "9410",
@@ -6611,8 +6702,8 @@
                 },
                 {
                     "Rank": "#5 - Okay",
-                    "PriorityText": "6/6",
-                    "PriorityNumber": 6,
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Gauntlets of Divinity",
                     "ItemID": "7724",
@@ -6642,11 +6733,11 @@
                     "ItemID": "215115",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Crafted - (BoE) (Engineering)",
+                    "Source": "Crafted - (BoP) (Engineering)",
                     "Slot": "waist"
                 },
                 {
-                    "Rank": "#2 - Good",
+                    "Rank": "#2 - Very Good",
                     "PriorityText": "3/7",
                     "PriorityNumber": 3,
                     "Phase": "2",
@@ -6755,7 +6846,7 @@
                 },
                 {
                     "Rank": "#1 - Best",
-                    "PriorityText": "1/7",
+                    "PriorityText": "1/8",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Shinkicker Boots",
@@ -6767,7 +6858,7 @@
                 },
                 {
                     "Rank": "#2 - Near Best",
-                    "PriorityText": "2/7",
+                    "PriorityText": "2/8",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Blackforge Greaves",
@@ -6779,20 +6870,32 @@
                 },
                 {
                     "Rank": "#3 - Good",
-                    "PriorityText": "3/7",
+                    "PriorityText": "3/8",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Twilight Avenger's Boots (3-set)",
+                    "ItemID": "211506",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Multiple Bosses (Blackfathom Deeps)",
+                    "Slot": "feet"
+                },
+                {
+                    "Rank": "#3 - Good",
+                    "PriorityText": "4/8",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Gnomebot Operators Boots",
                     "ItemID": "213340",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Drops from Crowd Pummeler 9-60 (Blackfathom Deeps)",
+                    "Source": "Drops from Crowd Pummeler 9-60 (Gnomeregan)",
                     "Slot": "feet"
                 },
                 {
                     "Rank": "#3 - Good",
-                    "PriorityText": "4/7",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/8",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Insulated Workboots",
                     "ItemID": "213341",
@@ -6803,8 +6906,8 @@
                 },
                 {
                     "Rank": "#3 - Good",
-                    "PriorityText": "5/7",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/8",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Gothic Sabatons of the Tiger(+8-9 Strength &amp; Agility)",
                     "ItemID": "10089",
@@ -6815,8 +6918,8 @@
                 },
                 {
                     "Rank": "#4 - Okay",
-                    "PriorityText": "6/7",
-                    "PriorityNumber": 6,
+                    "PriorityText": "7/8",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "H.A.Z.A.R.D. Boots",
                     "ItemID": "213335",
@@ -6827,8 +6930,8 @@
                 },
                 {
                     "Rank": "#4 - Okay",
-                    "PriorityText": "7/7",
-                    "PriorityNumber": 7,
+                    "PriorityText": "8/8",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "Highlander's Plate Greaves",
                     "ItemID": "20128",
@@ -6862,7 +6965,7 @@
                     "Slot": "neck"
                 },
                 {
-                    "Rank": "#3 - Good",
+                    "Rank": "#2 - Pre-Raid",
                     "PriorityText": "3/5",
                     "PriorityNumber": 3,
                     "Phase": "2",
@@ -6874,7 +6977,7 @@
                     "Slot": "neck"
                 },
                 {
-                    "Rank": "#4 - Okay",
+                    "Rank": "#3 - Good",
                     "PriorityText": "4/5",
                     "PriorityNumber": 4,
                     "Phase": "2",
@@ -6886,7 +6989,7 @@
                     "Slot": "neck"
                 },
                 {
-                    "Rank": "#4 - Okay",
+                    "Rank": "#3 - Good",
                     "PriorityText": "5/5",
                     "PriorityNumber": 5,
                     "Phase": "2",
@@ -6899,20 +7002,8 @@
                 },
                 {
                     "Rank": "#1 - Best",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
-                    "Phase": "2",
-                    "ItemName": "Hypercharged Gear of Devastation",
-                    "ItemID": "213284",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "Drops from Mekgineer Thermaplugg (Gnomeregan)",
-                    "Slot": "finger"
-                },
-                {
-                    "Rank": "#1 - Best",
-                    "PriorityText": "2/5",
-                    "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Protector's Band",
                     "ItemID": "19515",
@@ -6922,8 +7013,20 @@
                     "Slot": "finger"
                 },
                 {
+                    "Rank": "#1 - Best",
+                    "PriorityText": "2/6",
+                    "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Hypercharged Gear of Devastation",
+                    "ItemID": "213284",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Mekgineer Thermaplugg (Gnomeregan)",
+                    "Slot": "finger"
+                },
+                {
                     "Rank": "#2 - Pre-Raid",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Marsh Ring of the Tiger(+6-7 Strength &amp; Agility)",
@@ -6935,8 +7038,20 @@
                 },
                 {
                     "Rank": "#2 - Pre-Raid",
-                    "PriorityText": "4/5",
+                    "PriorityText": "4/6",
                     "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Protector's Band",
+                    "ItemID": "19517",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Sold by Illiyana Moonblaze[requires Honored with Silverwing Sentinels) (Ashenvale)",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "#2 - Pre-Raid",
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Jet Loop of Strength(+9-10 Strength)",
                     "ItemID": "11998",
@@ -6947,8 +7062,8 @@
                 },
                 {
                     "Rank": "#2 - Pre-Raid",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Assault Band",
                     "ItemID": "13095",
@@ -7019,7 +7134,7 @@
                 },
                 {
                     "Rank": "#1 - Insane",
-                    "PriorityText": "1/8",
+                    "PriorityText": "1/10",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Automatic Crowd Pummeler",
@@ -7030,8 +7145,8 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#2 - Pre-Raid",
-                    "PriorityText": "2/8",
+                    "Rank": "#1 - Insane",
+                    "PriorityText": "2/10",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "The Jackhammer",
@@ -7042,8 +7157,8 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#3 - Very Good",
-                    "PriorityText": "3/8",
+                    "Rank": "#2 - Very Good",
+                    "PriorityText": "3/10",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Nightblade",
@@ -7054,8 +7169,8 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#4 - Very Good",
-                    "PriorityText": "4/8",
+                    "Rank": "#3 - Very Good",
+                    "PriorityText": "4/10",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Fiery War Axe",
@@ -7066,8 +7181,8 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#4 - Very Good",
-                    "PriorityText": "5/8",
+                    "Rank": "#3 - Very Good",
+                    "PriorityText": "5/10",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Thermaplugg's Rocket Cleaver",
@@ -7078,20 +7193,20 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#5 - Good",
-                    "PriorityText": "6/8",
+                    "Rank": "#4 - Good",
+                    "PriorityText": "6/10",
                     "PriorityNumber": 6,
                     "Phase": "2",
-                    "ItemName": "Bloodlight Avenger's Edge",
-                    "ItemID": "216506",
+                    "ItemName": "Supercharged Headchopper",
+                    "ItemID": "213296",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Sold by Mai'zin - 15 Silver Blood Coins(reward from Blood Moon PvP Event) (Stranglethorn Vale)",
+                    "Source": "Drops from STX-04/BD (Gnomeregan)",
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#6 - Okay",
-                    "PriorityText": "7/8",
+                    "Rank": "#4 - Good",
+                    "PriorityText": "7/10",
                     "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Witchfury",
@@ -7102,9 +7217,21 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#7 - Okay",
-                    "PriorityText": "8/8",
+                    "Rank": "#5 - Good",
+                    "PriorityText": "8/10",
                     "PriorityNumber": 8,
+                    "Phase": "2",
+                    "ItemName": "Gizmotron Gigachopper",
+                    "ItemID": "213292",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Crowd Pummeler 9-60 (Gnomeregan)",
+                    "Slot": "two-hand"
+                },
+                {
+                    "Rank": "#5 - Good",
+                    "PriorityText": "9/10",
+                    "PriorityNumber": 9,
                     "Phase": "2",
                     "ItemName": "Mograine's Might",
                     "ItemID": "217302",
@@ -7114,8 +7241,20 @@
                     "Slot": "two-hand"
                 },
                 {
+                    "Rank": "#6 - Okay",
+                    "PriorityText": "10/10",
+                    "PriorityNumber": 10,
+                    "Phase": "2",
+                    "ItemName": "Bloodlight Avenger's Edge",
+                    "ItemID": "216506",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Sold by Mai'zin - 15 Silver Blood Coins(reward from Blood Moon PvP Event) (Stranglethorn Vale)",
+                    "Slot": "two-hand"
+                },
+                {
                     "Rank": "#1 - Best",
-                    "PriorityText": "1/7",
+                    "PriorityText": "1/8",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Thermaplugg's Rocket Cleaver",
@@ -7127,7 +7266,7 @@
                 },
                 {
                     "Rank": "#1 - Best",
-                    "PriorityText": "2/7",
+                    "PriorityText": "2/8",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Bloodlight Avenger's Edge",
@@ -7139,7 +7278,7 @@
                 },
                 {
                     "Rank": "#2 - Very Good",
-                    "PriorityText": "3/7",
+                    "PriorityText": "3/8",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Pendulum of Doom",
@@ -7151,32 +7290,44 @@
                 },
                 {
                     "Rank": "#3 - Good",
-                    "PriorityText": "4/7",
+                    "PriorityText": "4/8",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Ravager",
                     "ItemID": "7717",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Drops from Herod (Scarlet Monastery - Cathedral, Armory, & Library)",
+                    "Source": "Drops from Herod (Scarlet Monastery - Armory)",
                     "Slot": "two-hand"
                 },
                 {
                     "Rank": "#3 - Good",
-                    "PriorityText": "5/7",
+                    "PriorityText": "5/8",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Bonebiter",
                     "ItemID": "6830",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Reward from In the Name of the Light (Scarlet Monastery - Armory)",
+                    "Source": "Reward from In the Name of the Light (Scarlet Monastery - Cathedral, Armory, Library)",
                     "Slot": "two-hand"
                 },
                 {
                     "Rank": "#4 - Okay",
-                    "PriorityText": "6/7",
+                    "PriorityText": "6/8",
                     "PriorityNumber": 6,
+                    "Phase": "2",
+                    "ItemName": "Gizmotron Gigachopper",
+                    "ItemID": "213292",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Crowd Pummeler 9-60 (Gnomeregan)",
+                    "Slot": "two-hand"
+                },
+                {
+                    "Rank": "#5 - Okay",
+                    "PriorityText": "7/8",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Mograine's Might",
                     "ItemID": "217302",
@@ -7186,9 +7337,9 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#4 - Okay",
-                    "PriorityText": "7/7",
-                    "PriorityNumber": 7,
+                    "Rank": "#5 - Okay",
+                    "PriorityText": "8/8",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "The Pacifier",
                     "ItemID": "6327",
@@ -7725,11 +7876,11 @@
                     "PriorityText": "1/1",
                     "PriorityNumber": 1,
                     "Phase": "2",
-                    "ItemName": "Discarded Tenets of the Silver Hand",
-                    "ItemID": "209574",
+                    "ItemName": "Libram of Benediction",
+                    "ItemID": "215435",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
-                    "Source": "Drops from Lorgus Jett (Blackfathom Deeps)",
+                    "Source": "Drops from Grubbis (Gnomeregan)",
                     "Slot": "relic"
                 }
             ]
@@ -8113,7 +8264,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "H.A.Z.A.R.D. Boots",
@@ -8125,7 +8276,7 @@
                 },
                 {
                     "Rank": "PvP Option",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Highlander's Lamellar Greaves",
@@ -8137,7 +8288,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Obsidian Greaves",
@@ -8148,9 +8299,21 @@
                     "Slot": "feet"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "4/5",
+                    "Rank": "Best",
+                    "PriorityText": "4/6",
                     "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Caverndeep Sabatons",
+                    "ItemID": "213294",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Grubbis (Gnomeregan)",
+                    "Slot": "feet"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Revelosh's Boots",
                     "ItemID": "217306",
@@ -8161,8 +8324,8 @@
                 },
                 {
                     "Rank": "Decent",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Tyrant's Greaves",
                     "ItemID": "14839",
@@ -9746,7 +9909,7 @@
                     "Slot": "head"
                 },
                 {
-                    "Rank": "Optional",
+                    "Rank": "Good - Healing",
                     "PriorityText": "7/7",
                     "PriorityNumber": 7,
                     "Phase": "2",
@@ -9759,7 +9922,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/7",
+                    "PriorityText": "1/8",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Synthetic Mantle",
@@ -9771,7 +9934,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "2/7",
+                    "PriorityText": "2/8",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Inquisitor's Shawl",
@@ -9783,7 +9946,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "3/7",
+                    "PriorityText": "3/8",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Crimson Silk Shoulders",
@@ -9795,7 +9958,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "4/7",
+                    "PriorityText": "4/8",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Invoker's Mantle",
@@ -9807,7 +9970,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "5/7",
+                    "PriorityText": "5/8",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Magician's Mantle",
@@ -9819,7 +9982,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "6/7",
+                    "PriorityText": "6/8",
                     "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Frayed Chestnut Mantle",
@@ -9831,8 +9994,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "7/7",
+                    "PriorityText": "7/8",
                     "PriorityNumber": 7,
+                    "Phase": "2",
+                    "ItemName": "Berylline Pads",
+                    "ItemID": "4197",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "The Crone of the KraulA Vengeful Fate (Razorfen Kraul)",
+                    "Slot": "shoulders"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "8/8",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "Azshari Novice's Shoulderpads",
                     "ItemID": "209679",
@@ -9878,7 +10053,7 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "4/7",
                     "PriorityNumber": 4,
                     "Phase": "2",
@@ -9890,7 +10065,7 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Good - Healing",
                     "PriorityText": "5/7",
                     "PriorityNumber": 5,
                     "Phase": "2",
@@ -9902,21 +10077,9 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Good - Healing",
                     "PriorityText": "6/7",
                     "PriorityNumber": 6,
-                    "Phase": "2",
-                    "ItemName": "Flowing Scarf",
-                    "ItemID": "209423",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "Drops from Baron Aquanis (Blackfathom Deeps)",
-                    "Slot": "back"
-                },
-                {
-                    "Rank": "Good",
-                    "PriorityText": "7/7",
-                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Caretaker's Cape",
                     "ItemID": "19532",
@@ -9926,15 +10089,27 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "7/7",
-                    "PriorityNumber": 7,
+                    "Rank": "Good - Healing",
+                    "PriorityText": "6/7",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Battle Healer's Cloak",
                     "ItemID": "19528",
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Multiple",
+                    "Slot": "back"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
+                    "Phase": "2",
+                    "ItemName": "Flowing Scarf",
+                    "ItemID": "209423",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Baron Aquanis (Blackfathom Deeps)",
                     "Slot": "back"
                 },
                 {
@@ -10034,7 +10209,7 @@
                     "Slot": "chest"
                 },
                 {
-                    "Rank": "Optional",
+                    "Rank": "Best - Healing",
                     "PriorityText": "9/9",
                     "PriorityNumber": 9,
                     "Phase": "2",
@@ -10094,7 +10269,7 @@
                     "Slot": "wrist"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "4/6",
                     "PriorityNumber": 4,
                     "Phase": "2",
@@ -10262,7 +10437,7 @@
                     "Slot": "waist"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "5/8",
                     "PriorityNumber": 5,
                     "Phase": "2",
@@ -10382,7 +10557,7 @@
                     "Slot": "legs"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "7/9",
                     "PriorityNumber": 7,
                     "Phase": "2",
@@ -10394,7 +10569,7 @@
                     "Slot": "legs"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Good - Healing",
                     "PriorityText": "8/9",
                     "PriorityNumber": 8,
                     "Phase": "2",
@@ -10478,7 +10653,7 @@
                     "Slot": "feet"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "6/8",
                     "PriorityNumber": 6,
                     "Phase": "2",
@@ -10622,7 +10797,7 @@
                     "Slot": "finger"
                 },
                 {
-                    "Rank": "Great",
+                    "Rank": "Best",
                     "PriorityText": "2/7",
                     "PriorityNumber": 2,
                     "Phase": "2",
@@ -10670,7 +10845,7 @@
                     "Slot": "finger"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "6/7",
                     "PriorityNumber": 6,
                     "Phase": "2",
@@ -10682,7 +10857,7 @@
                     "Slot": "finger"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "7/7",
                     "PriorityNumber": 7,
                     "Phase": "2",
@@ -10694,7 +10869,7 @@
                     "Slot": "finger"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "7/7",
                     "PriorityNumber": 7,
                     "Phase": "2",
@@ -10850,7 +11025,7 @@
                     "Slot": "main-hand"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Best - Healing",
                     "PriorityText": "5/5",
                     "PriorityNumber": 5,
                     "Phase": "2",
@@ -10898,7 +11073,7 @@
                     "Slot": "main-hand"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Good - Healing",
                     "PriorityText": "4/5",
                     "PriorityNumber": 4,
                     "Phase": "2",
@@ -10910,7 +11085,7 @@
                     "Slot": "main-hand"
                 },
                 {
-                    "Rank": "Good",
+                    "Rank": "Good - Healing",
                     "PriorityText": "5/5",
                     "PriorityNumber": 5,
                     "Phase": "2",
@@ -10995,7 +11170,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/6",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Mechanostrider Gear Shifter",
@@ -11007,7 +11182,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "2/6",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Necrotic Wand",
@@ -11019,7 +11194,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "3/6",
+                    "PriorityText": "3/7",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Greater Mystic Wand",
@@ -11031,7 +11206,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "4/6",
+                    "PriorityText": "4/7",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Izzleflick's Inextinguishable Igniter",
@@ -11043,7 +11218,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/6",
+                    "PriorityText": "5/7",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Jaina's Firestarter",
@@ -11055,7 +11230,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "6/6",
+                    "PriorityText": "6/7",
                     "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Phoenix Ignition",
@@ -11063,6 +11238,18 @@
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Drops from Twilight Lord Kelris (Blackfathom Deeps)",
+                    "Slot": "ranged"
+                },
+                {
+                    "Rank": "Good- Healing",
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
+                    "Phase": "2",
+                    "ItemName": "Umbral Wand of Healing",
+                    "ItemID": "5216",
+                    "ItemSuffixKey": "AF",
+                    "ItemBISSuffixID": "2032",
+                    "Source": "World Drop (Azeroth)",
                     "Slot": "ranged"
                 }
             ]
@@ -12972,7 +13159,7 @@
             "contents": [
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Glowing Hyperconductive Scale Coif",
@@ -12983,9 +13170,45 @@
                     "Slot": "head"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "Rank": "Best",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Gneuro-Linked Arcano-Filament Monocle",
+                    "ItemID": "215111",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Gneuro-Linked Arcano-Filament Monocle (Tailoring)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/7",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Reflective Skullcap",
+                    "ItemID": "213279",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Electrocutioner 6000 (Gnomeregan)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/7",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Whitemane's Chapeau",
+                    "ItemID": "217300",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/7",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Rakkamar's Tattered Thinking Cap",
                     "ItemID": "211842",
@@ -12996,8 +13219,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "6/7",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Twilight Elementalist's Cowl",
                     "ItemID": "211507",
@@ -13008,8 +13231,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Twilight Invoker's Shawl",
                     "ItemID": "209683",
@@ -13020,7 +13243,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Lightning Rod Spaulders",
@@ -13032,7 +13255,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Synthetic Mantle",
@@ -13044,8 +13267,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Inquisitor's Shawl",
+                    "ItemID": "19507",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Fairbanks (Scarlet Monastery Cathedral)",
+                    "Slot": "shoulders"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Invoker's Mantle",
                     "ItemID": "215365",
@@ -13056,8 +13291,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Magician's Mantle",
                     "ItemID": "12998",
@@ -13068,8 +13303,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Frayed Chestnut Mantle",
                     "ItemID": "211468",
@@ -13116,7 +13351,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Electromantic Chainshirt",
@@ -13128,8 +13363,32 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Deathchill Armor",
+                    "ItemID": "217289",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Amnennar the Coldbringer (Razorfen Downs)",
+                    "Slot": "chest"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/5",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Robe of Power",
+                    "ItemID": "7054",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Robe of Power (Tailoring)",
+                    "Slot": "chest"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/5",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Twilight Invoker's Robes",
                     "ItemID": "209671",
@@ -13140,8 +13399,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
-                    "PriorityNumber": 3,
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Twilight Elementalist's Robe",
                     "ItemID": "211509",
@@ -13152,7 +13411,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Dryad's Wrist Bindings",
@@ -13164,8 +13423,32 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Lev's Oil-Stained Bindings",
+                    "ItemID": "213285",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Viscous Fallout (Gnomeregan)",
+                    "Slot": "wrist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/7",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Lightningcaller's Bindings",
+                    "ItemID": "212996",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Calm Before the Storm (Thousand Needles)",
+                    "Slot": "wrist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/7",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Phoenix Bindings",
                     "ItemID": "210781",
@@ -13176,8 +13459,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
-                    "PriorityNumber": 3,
+                    "PriorityText": "5/7",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Glowing Leather Bands",
                     "ItemID": "209578",
@@ -13188,8 +13471,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/7",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Mindthrust Bracers",
                     "ItemID": "1974",
@@ -13200,8 +13483,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Silver-thread Cuffs",
                     "ItemID": "4036",
@@ -13212,7 +13495,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Dreamweave Gloves",
@@ -13224,8 +13507,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Fingers of Arcane Accuracy",
+                    "ItemID": "213320",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from [STX-04/BD (Gnomeregan)",
+                    "Slot": "hands"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/4",
+                    "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Slick Fingerless Gloves",
                     "ItemID": "211455",
@@ -13236,8 +13531,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
-                    "PriorityNumber": 3,
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Black Fingerless Gloves",
                     "ItemID": "209672",
@@ -13248,7 +13543,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Electromagnetic Waistcord",
@@ -13260,8 +13555,32 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Hyperconductive Goldwrap",
+                    "ItemID": "215115",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Hyperconductive Goldwap (Engineering)",
+                    "Slot": "waist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/6",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Deathmage Sash",
+                    "ItemID": "217292",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Mordresh Fire Eye (Razorfen Downs)",
+                    "Slot": "waist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Ancient Moss Cinch",
                     "ItemID": "209685",
@@ -13272,8 +13591,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Invoker's Cord",
                     "ItemID": "215366",
@@ -13284,8 +13603,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Belt of Arugal",
                     "ItemID": "6392",
@@ -13296,7 +13615,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Electromantic Gambeson",
@@ -13308,8 +13627,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Red Mageweave Pants",
+                    "ItemID": "10009",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Red Mageweave Pants (Tailoring)",
+                    "Slot": "legs"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/4",
+                    "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Soul Leech Pants",
                     "ItemID": "209684",
@@ -13320,8 +13651,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
-                    "PriorityNumber": 3,
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Gaze Dreamer Leggings",
                     "ItemID": "209667",
@@ -13332,7 +13663,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Electromantic Grounding Boots",
@@ -13344,7 +13675,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Extraplanar Spidersilk Boots",
@@ -13356,8 +13687,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
+                    "PriorityText": "3/4",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Southsea Mojo Boots",
+                    "ItemID": "20641",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Southsea Shakedown (Tanaris)",
+                    "Slot": "feet"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Twilight Invoker's Shoes",
                     "ItemID": "209669",
@@ -13368,7 +13711,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Piston Pendant",
@@ -13380,7 +13723,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/4",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Jagged Bone Necklace",
@@ -13392,8 +13735,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
+                    "PriorityText": "3/4",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Ghostshard Talisman",
+                    "ItemID": "217296",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Azshir the Sleepless (Scarlet Monastery Graveyard)",
+                    "Slot": "neck"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/4",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Spectral Necklace with Intellect or Mp5",
                     "ItemID": "12047",
@@ -13607,7 +13962,7 @@
                     "Slot": "off-hand"
                 },
                 {
-                    "Rank": "Best",
+                    "Rank": "Good",
                     "PriorityText": "2/5",
                     "PriorityNumber": 2,
                     "Phase": "2",
@@ -13939,7 +14294,7 @@
                 },
                 {
                     "Rank": "Best - DW",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Machinist's Gloves",
@@ -13951,7 +14306,7 @@
                 },
                 {
                     "Rank": "Best - 2H",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Void-Touched Leather Gloves",
@@ -13963,8 +14318,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Gauntlets of Divinity",
+                    "ItemID": "7724",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Scarlet Commander Mograine (Scarlet Monastery)",
+                    "Slot": "hands"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Jangdor's Handcrafted Gloves",
                     "ItemID": "9632",
@@ -13975,8 +14342,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Imperial Leather Gloves",
                     "ItemID": "4063",
@@ -13987,8 +14354,8 @@
                 },
                 {
                     "Rank": "Optional",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Reticulated Bone Gauntlets",
                     "ItemID": "9435",
@@ -14347,7 +14714,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Mekkatorque's Arcano-Shredder",
@@ -14359,7 +14726,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Heaven's Light",
@@ -14371,7 +14738,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Ultrasonic Vibroblade",
@@ -14383,7 +14750,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
+                    "PriorityText": "4/6",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Stalvan's Reaper",
@@ -14395,8 +14762,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/5",
+                    "PriorityText": "5/6",
                     "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Hand of Righteousness",
+                    "ItemID": "7721",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "High Inquisitor Whitemane (Scarlet Monastery)",
+                    "Slot": "main-hand"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Axe of the Ebon Drake",
                     "ItemID": "10744",
@@ -14407,7 +14786,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Cogmaster's Claw",
@@ -14419,7 +14798,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Sickle Axe",
@@ -14431,7 +14810,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Stonevault Bonebreaker",
@@ -14443,7 +14822,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
+                    "PriorityText": "4/6",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Stalvan's Reaper",
@@ -14455,8 +14834,20 @@
                 },
                 {
                     "Rank": "Optional",
-                    "PriorityText": "5/5",
+                    "PriorityText": "5/6",
                     "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Southsea Lamp",
+                    "ItemID": "9359",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "BoE (Auction House)",
+                    "Slot": "off-hand"
+                },
+                {
+                    "Rank": "Optional",
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Shovelphlange's Mining Axe",
                     "ItemID": "9378",
@@ -14498,7 +14889,7 @@
             "contents": [
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Gneuro-Linked Arcano-Filament Monocle",
@@ -14510,8 +14901,32 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Reflective Skullcap",
+                    "ItemID": "213279",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Electrocutioner 6000 (Gnomeregan)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/6",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Whitemane's Chapeau",
+                    "ItemID": "217300",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+                    "Slot": "head"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Rakkamar's Tattered Thinking Cap",
                     "ItemID": "211842",
@@ -14522,8 +14937,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Twilight Elementalist's Cowl",
                     "ItemID": "211507",
@@ -14534,8 +14949,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Twilight Invoker's Shawl",
                     "ItemID": "209683",
@@ -14545,8 +14960,8 @@
                     "Slot": "head"
                 },
                 {
-                    "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "Rank": "Best (Balanced)",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Synthetic Mantle",
@@ -14557,9 +14972,45 @@
                     "Slot": "shoulders"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "Rank": "Good (pure HPS)",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Generously Padded Shoulderpads",
+                    "ItemID": "213413",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Viscous Fallout (Gnomeregan)",
+                    "Slot": "shoulders"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/7",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Inquisitor's Shawl",
+                    "ItemID": "19507",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Fairbanks (Scarlet Monastery Cathedral)",
+                    "Slot": "shoulders"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/7",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Crimson Silk Shoulders",
+                    "ItemID": "217250",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Crimson Silk Shoulders (Tailoring)",
+                    "Slot": "shoulders"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/7",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Magician's Mantle",
                     "ItemID": "12998",
@@ -14570,8 +15021,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "6/7",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Invoker's Mantle",
                     "ItemID": "215365",
@@ -14582,8 +15033,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Frayed Chestnut Mantle",
                     "ItemID": "211468",
@@ -14594,7 +15045,7 @@
                 },
                 {
                     "Rank": "Best (pure HPS)",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Cloak of Invention",
@@ -14606,7 +15057,7 @@
                 },
                 {
                     "Rank": "Best (Balanced)",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Bloodrot Cloak",
@@ -14618,8 +15069,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Battle Healer's Cloak",
+                    "ItemID": "19528",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Warsong Outriders Honored (Ashenvale)",
+                    "Slot": "back"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Cape of Hemostasis",
                     "ItemID": "216623",
@@ -14630,8 +15093,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Flowing Scarf",
                     "ItemID": "209423",
@@ -14642,8 +15105,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Sergeant's Cloak",
                     "ItemID": "213088",
@@ -14654,7 +15117,7 @@
                 },
                 {
                     "Rank": "Best (pure HPS)",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Hyperconductive Shimmershirt",
@@ -14666,7 +15129,7 @@
                 },
                 {
                     "Rank": "Best (Balanced)",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Electromantic Chainshirt",
@@ -14678,8 +15141,32 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Deathchill Armor",
+                    "ItemID": "217289",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Amnennar the Coldbringer (Razorfen Downs)",
+                    "Slot": "chest"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Robe of Power",
+                    "ItemID": "7054",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Robe of Power (Tailoring)",
+                    "Slot": "chest"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Twilight Invoker's Robes",
                     "ItemID": "209671",
@@ -14690,8 +15177,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Twilight Elementalist's Robe",
                     "ItemID": "211509",
@@ -14701,8 +15188,8 @@
                     "Slot": "chest"
                 },
                 {
-                    "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "Rank": "Best (Balanced)",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Dryad's Wrist Bindings",
@@ -14713,9 +15200,45 @@
                     "Slot": "wrist"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "Rank": "Best (pure HPS)",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Tinker's Wrist Wraps",
+                    "ItemID": "213415",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Crowd Pummeler 9-60 (Gnomeregan)",
+                    "Slot": "wrist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/7",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Lev's Oil-Stained Bindings",
+                    "ItemID": "213285",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Viscous Fallout (Gnomeregan)",
+                    "Slot": "wrist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/7",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Tidecaller's Bindings",
+                    "ItemID": "212997",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Calm Before the Storm (Thousand Needles)",
+                    "Slot": "wrist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/7",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Mindthrust Bracers",
                     "ItemID": "1974",
@@ -14726,8 +15249,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "6/7",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Silver-thread Cuffs",
                     "ItemID": "4036",
@@ -14738,8 +15261,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Glowing Leather Bands",
                     "ItemID": "209578",
@@ -14798,7 +15321,7 @@
                 },
                 {
                     "Rank": "Best (pure HPS)",
-                    "PriorityText": "1/5",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Mech-Mender's Sash",
@@ -14810,7 +15333,7 @@
                 },
                 {
                     "Rank": "Best (Balanced)",
-                    "PriorityText": "2/5",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Electromagnetic Waistcord",
@@ -14822,8 +15345,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/5",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Deathmage Sash",
+                    "ItemID": "217292",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Mordresh Fire Eye (Razorfen Downs)",
+                    "Slot": "waist"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Ancient Moss Cinch",
                     "ItemID": "209685",
@@ -14834,8 +15369,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/5",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Invoker's Cord",
                     "ItemID": "215366",
@@ -14846,8 +15381,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/5",
-                    "PriorityNumber": 5,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Belt of Arugal",
                     "ItemID": "6392",
@@ -14858,7 +15393,7 @@
                 },
                 {
                     "Rank": "Best (pure HPS)",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Hyperconductive Pantaloons",
@@ -14870,7 +15405,7 @@
                 },
                 {
                     "Rank": "Best (Balanced)",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Electromantic Gambeson",
@@ -14882,8 +15417,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/5",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Red Mageweave Pants",
+                    "ItemID": "10009",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Red Mageweave Pants (Tailoring)",
+                    "Slot": "legs"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/5",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Soul Leech Pants",
                     "ItemID": "209684",
@@ -14894,8 +15441,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Gaze Dreamer Leggings",
                     "ItemID": "209667",
@@ -14906,7 +15453,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/3",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Electromantic Grounding Boots",
@@ -14918,8 +15465,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/3",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Acidic Waders",
+                    "ItemID": "213290",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Viscous Fallout (Gnomeregan)",
+                    "Slot": "feet"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/5",
+                    "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Extraplanar Spidersilk Boots",
                     "ItemID": "210795",
@@ -14930,8 +15489,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/3",
-                    "PriorityNumber": 3,
+                    "PriorityText": "4/5",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Southsea Mojo Boots",
+                    "ItemID": "20641",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Southsea Shakedown (Tanaris)",
+                    "Slot": "feet"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Twilight Invoker's Shoes",
                     "ItemID": "209669",
@@ -14942,7 +15513,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Pendant of Homecoming",
@@ -14954,7 +15525,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Piston Pendant",
@@ -14966,8 +15537,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Triune Amulet",
+                    "ItemID": "217301",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+                    "Slot": "neck"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Jagged Bone Necklace",
                     "ItemID": "209686",
@@ -14978,8 +15561,20 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Ghostshard Talisman",
+                    "ItemID": "217296",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Azshir the Sleepless (Scarlet Monastery Graveyard)",
+                    "Slot": "neck"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Spectral Necklace with Intellect or Mp5",
                     "ItemID": "12047",
@@ -14989,21 +15584,9 @@
                     "Slot": "neck"
                 },
                 {
-                    "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "Rank": "Best (Balanced)",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
-                    "Phase": "2",
-                    "ItemName": "Advisor's Ring",
-                    "ItemID": "19520",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "Warsong Outriders Honored (Ashenvale)",
-                    "Slot": "finger"
-                },
-                {
-                    "Rank": "Best",
-                    "PriorityText": "2/4",
-                    "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Hypercharged Gear of Conflagration",
                     "ItemID": "213283",
@@ -15013,9 +15596,45 @@
                     "Slot": "finger"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "3/4",
+                    "Rank": "Best (pure HPS)",
+                    "PriorityText": "2/6",
+                    "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Hypercharged Gear of Innovation",
+                    "ItemID": "213282",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Mekgineer Thermaplugg (Gnomeregan)",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Best (Balanced)",
+                    "PriorityText": "3/6",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Advisor's Ring",
+                    "ItemID": "19520",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Warsong Outriders Honored (Ashenvale)",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Good (Balanced)",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Advisor's Ring",
+                    "ItemID": "19521",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Warsong Outriders Honored (Ashenvale)",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Lavishly Jeweled Ring",
                     "ItemID": "1156",
@@ -15026,8 +15645,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Signet of the Twilight Lord",
                     "ItemID": "209668",
@@ -15086,7 +15705,7 @@
                 },
                 {
                     "Rank": "Best (MH)",
-                    "PriorityText": "1/7",
+                    "PriorityText": "1/9",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Glimmering Gizmoblade",
@@ -15098,7 +15717,7 @@
                 },
                 {
                     "Rank": "Best (OH)",
-                    "PriorityText": "2/7",
+                    "PriorityText": "2/9",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Hypnotic Blade",
@@ -15109,9 +15728,33 @@
                     "Slot": "main-hand"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "3/7",
+                    "Rank": "Best (pure HPS)",
+                    "PriorityText": "3/9",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Gear-Mender's Grace",
+                    "ItemID": "213352",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Viscous Fallout (Gnomeregan)",
+                    "Slot": "main-hand"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/9",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Hand of Righteousness",
+                    "ItemID": "7721",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+                    "Slot": "main-hand"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "5/9",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Rod of the Ancient Sleepwalker",
                     "ItemID": "209561",
@@ -15122,8 +15765,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/7",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/9",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Dagger of Willing Sacrifice",
                     "ItemID": "211456",
@@ -15134,8 +15777,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/7",
-                    "PriorityNumber": 5,
+                    "PriorityText": "7/9",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Wrathful Spire",
                     "ItemID": "209573",
@@ -15146,8 +15789,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "6/7",
-                    "PriorityNumber": 6,
+                    "PriorityText": "8/9",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "Blackfathom Ritual Dagger",
                     "ItemID": "209694",
@@ -15158,8 +15801,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "7/7",
-                    "PriorityNumber": 7,
+                    "PriorityText": "9/9",
+                    "PriorityNumber": 9,
                     "Phase": "2",
                     "ItemName": "Twilight Sage's Walking Stick",
                     "ItemID": "209559",
@@ -15170,7 +15813,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Dielectric Safety Shield",
@@ -15182,8 +15825,32 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
+                    "Phase": "2",
+                    "ItemName": "Bloodstorm Barrier",
+                    "ItemID": "216501",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "5x Silver Blood Coin (The Blood Moon World PvP Event Guide - Season of Discovery)",
+                    "Slot": "off-hand"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "3/6",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Irradiated Tower Shield",
+                    "ItemID": "213351",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Grubbis (Gnomeregan)",
+                    "Slot": "off-hand"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Tome of Cavern Lore",
                     "ItemID": "209570",
@@ -15194,8 +15861,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/4",
-                    "PriorityNumber": 3,
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Cracked Water Globe",
                     "ItemID": "209590",
@@ -15206,8 +15873,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Ancient Arctic Buckler",
                     "ItemID": "211460",
@@ -17428,7 +18095,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/9",
+                    "PriorityText": "1/10",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Hypercharged Gear of Conflagration",
@@ -17440,7 +18107,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "2/9",
+                    "PriorityText": "2/10",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Lorekeeper's Ring",
@@ -17452,7 +18119,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "2/9",
+                    "PriorityText": "2/10",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Advisor's Ring",
@@ -17464,7 +18131,7 @@
                 },
                 {
                     "Rank": "Best*",
-                    "PriorityText": "3/9",
+                    "PriorityText": "3/10",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Infernal Bloodcoil Band",
@@ -17476,7 +18143,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "4/9",
+                    "PriorityText": "4/10",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Electrocutioner Hexnut",
@@ -17488,8 +18155,32 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "5/9",
+                    "PriorityText": "5/10",
                     "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Lorekeeper's Ring",
+                    "ItemID": "19525",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Multiple",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Great",
+                    "PriorityText": "5/10",
+                    "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Advisor's Ring",
+                    "ItemID": "19521",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Multiple",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Great",
+                    "PriorityText": "6/10",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Signet of the Twilight Lord",
                     "ItemID": "209668",
@@ -17500,8 +18191,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "6/9",
-                    "PriorityNumber": 6,
+                    "PriorityText": "7/10",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Umbral Bloodseal",
                     "ItemID": "216507",
@@ -17512,8 +18203,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "7/9",
-                    "PriorityNumber": 7,
+                    "PriorityText": "8/10",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "Ogremind Ring",
                     "ItemID": "1993",
@@ -17524,8 +18215,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "8/9",
-                    "PriorityNumber": 8,
+                    "PriorityText": "9/10",
+                    "PriorityNumber": 9,
                     "Phase": "2",
                     "ItemName": "Voodoo Band",
                     "ItemID": "1996",
@@ -17536,8 +18227,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "9/9",
-                    "PriorityNumber": 9,
+                    "PriorityText": "10/10",
+                    "PriorityNumber": 10,
                     "Phase": "2",
                     "ItemName": "Mindbender Loop",
                     "ItemID": "5009",
@@ -18263,7 +18954,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/13",
+                    "PriorityText": "1/12",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Coagulated Cloak",
@@ -18275,7 +18966,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "2/13",
+                    "PriorityText": "2/12",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Sergeant's Cape",
@@ -18287,7 +18978,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "2/13",
+                    "PriorityText": "2/12",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Sergeant's Cloak",
@@ -18299,7 +18990,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "3/13",
+                    "PriorityText": "3/12",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Bloodrot Cloak",
@@ -18311,7 +19002,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "4/13",
+                    "PriorityText": "4/12",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Ingenuity's Cover",
@@ -18323,7 +19014,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/13",
+                    "PriorityText": "5/12",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Silky Spider Cape",
@@ -18334,21 +19025,9 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Good",
-                    "PriorityText": "6/13",
-                    "PriorityNumber": 6,
-                    "Phase": "2",
-                    "ItemName": "Mantle of Lady Falther'ess",
-                    "ItemID": "23178",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "Lady Falther'essRazorfen Downs",
-                    "Slot": "back"
-                },
-                {
                     "Rank": "Mediocre",
-                    "PriorityText": "7/13",
-                    "PriorityNumber": 7,
+                    "PriorityText": "6/12",
+                    "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Faded Hakkari Cloak",
                     "ItemID": "20218",
@@ -18359,8 +19038,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "8/13",
-                    "PriorityNumber": 8,
+                    "PriorityText": "7/12",
+                    "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Tattered Hakkari Cape",
                     "ItemID": "20219",
@@ -18371,8 +19050,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "9/13",
-                    "PriorityNumber": 9,
+                    "PriorityText": "8/12",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "Cape of Hemostasis",
                     "ItemID": "216623",
@@ -18383,8 +19062,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "10/13",
-                    "PriorityNumber": 10,
+                    "PriorityText": "9/12",
+                    "PriorityNumber": 9,
                     "Phase": "2",
                     "ItemName": "Blooddrenched Drape",
                     "ItemID": "216621",
@@ -18395,8 +19074,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "11/13",
-                    "PriorityNumber": 11,
+                    "PriorityText": "10/12",
+                    "PriorityNumber": 10,
                     "Phase": "2",
                     "ItemName": "Long Silken Cloak",
                     "ItemID": "217252",
@@ -18407,8 +19086,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "12/13",
-                    "PriorityNumber": 12,
+                    "PriorityText": "11/12",
+                    "PriorityNumber": 11,
                     "Phase": "2",
                     "ItemName": "Drape of Dismantling",
                     "ItemID": "213307",
@@ -18419,8 +19098,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "13/13",
-                    "PriorityNumber": 13,
+                    "PriorityText": "12/12",
+                    "PriorityNumber": 12,
                     "Phase": "2",
                     "ItemName": "Prototype Parachute Cloak",
                     "ItemID": "213308",
@@ -19463,7 +20142,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/8",
+                    "PriorityText": "1/9",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Talvash's Brilliant Gold Ring",
@@ -19475,7 +20154,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/8",
+                    "PriorityText": "1/9",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Nogg's Brilliant Gold Ring",
@@ -19487,7 +20166,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "2/8",
+                    "PriorityText": "2/9",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Band of the Great Tortoise",
@@ -19499,7 +20178,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "3/8",
+                    "PriorityText": "3/9",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Infernal Bloodcoil Band",
@@ -19511,7 +20190,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "4/8",
+                    "PriorityText": "4/9",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Hypercharged Gear of Conflagration",
@@ -19523,7 +20202,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "5/8",
+                    "PriorityText": "5/9",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Lorekeeper's Ring",
@@ -19535,7 +20214,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "5/8",
+                    "PriorityText": "5/9",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Advisor's Ring",
@@ -19547,7 +20226,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "6/8",
+                    "PriorityText": "6/9",
                     "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Electrocutioner Hexnut",
@@ -19558,9 +20237,33 @@
                     "Slot": "finger"
                 },
                 {
-                    "Rank": "Mediocre",
-                    "PriorityText": "7/8",
+                    "Rank": "Good",
+                    "PriorityText": "7/9",
                     "PriorityNumber": 7,
+                    "Phase": "2",
+                    "ItemName": "Lorekeeper's Ring",
+                    "ItemID": "19525",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Multiple",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "7/9",
+                    "PriorityNumber": 7,
+                    "Phase": "2",
+                    "ItemName": "Advisor's Ring",
+                    "ItemID": "19521",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Multiple",
+                    "Slot": "finger"
+                },
+                {
+                    "Rank": "Mediocre",
+                    "PriorityText": "8/9",
+                    "PriorityNumber": 8,
                     "Phase": "2",
                     "ItemName": "Ring of Defense",
                     "ItemID": "12985",
@@ -19571,8 +20274,8 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "8/8",
-                    "PriorityNumber": 8,
+                    "PriorityText": "9/9",
+                    "PriorityNumber": 9,
                     "Phase": "2",
                     "ItemName": "Signet of the Twilight Lord",
                     "ItemID": "209668",
@@ -19979,7 +20682,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/8",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Mechanostrider Gear Shifter",
@@ -19991,7 +20694,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "2/8",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Umbral Wand of Fiery Wrath",
@@ -20003,7 +20706,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "3/8",
+                    "PriorityText": "3/7",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Necrotic Wand",
@@ -20015,7 +20718,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/8",
+                    "PriorityText": "4/7",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Greater Mystic Wand",
@@ -20027,7 +20730,7 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "5/8",
+                    "PriorityText": "5/7",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Izzleflick's Inextinguishable Igniter",
@@ -20039,7 +20742,7 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "6/8",
+                    "PriorityText": "6/7",
                     "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Jaina's Firestarter",
@@ -20051,7 +20754,7 @@
                 },
                 {
                     "Rank": "Mediocre",
-                    "PriorityText": "7/8",
+                    "PriorityText": "7/7",
                     "PriorityNumber": 7,
                     "Phase": "2",
                     "ItemName": "Phoenix Ignition",
@@ -20059,18 +20762,6 @@
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Twilight Lord KelrisBlackfathom Deeps",
-                    "Slot": "ranged"
-                },
-                {
-                    "Rank": "Mediocre",
-                    "PriorityText": "8/8",
-                    "PriorityNumber": 8,
-                    "Phase": "2",
-                    "ItemName": "Lady Falther'ess' Finger",
-                    "ItemID": "23177",
-                    "ItemSuffixKey": "",
-                    "ItemBISSuffixID": "",
-                    "Source": "Lady Falther'essRazorfen Downs",
                     "Slot": "ranged"
                 }
             ]
