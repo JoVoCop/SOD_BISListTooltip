@@ -260,6 +260,9 @@ WOW_SLOT_ALIASES = {
     "two-hander": "two-hand",
     "weapon-single-target": "two-hand", # Paladin P2 header. I honestly forget why I even track slots so putting in this hack for now. Could likely clean this up and/or add exceptions per page
     "weapon-cleave": "two-hand", # Same as above (Palandin DPS P2)
+    "weapon-martyrdom": "two-hand", # Same as above (Palandin Tank P2)
+    "weapon-divine-storm-human": "two-hand", # Same as above (Palandin Tank P2)
+    "weapon-divine-storm-dwarf": "two-hand", # Same as above (Palandin Tank P2)
     "duel-wield": "one-hand",
     "dual-wield": "one-hand",
     "wand": "ranged",
