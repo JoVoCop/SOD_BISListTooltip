@@ -119,6 +119,7 @@
         "213300|": "Fighter Ace Gloves",
         "211455|": "Slick Fingerless Gloves",
         "213414|": "Mech-Mender's Sash",
+        "20098|": "Highlander's Cloth Girdle",
         "217292|": "Deathmage Sash",
         "209685|": "Ancient Moss Cinch",
         "215379|": "Irradiated Trousers",
@@ -130,6 +131,7 @@
         "210795|": "Extraplanar Spidersilk Boots",
         "213290|": "Acidic Waders",
         "20641|": "Southsea Mojo Boots",
+        "20095|": "Highlander's Cloth Boots",
         "213346|": "Pendant of Homecoming",
         "217301|": "Triune Amulet",
         "217290|": "Glowing Eye of Mordresh",
@@ -301,18 +303,18 @@
         "13095|": "Assault Band",
         "216505|": "Bloodlight Crusader's Radiance",
         "9423|": "The Jackhammer",
-        "216506|": "Bloodlight Avenger's Edge",
-        "213416|": "Thermaplugg's Rocket Cleaver",
-        "213292|": "Gizmotron Gigachopper",
-        "217302|": "Mograine's Might",
         "1982|": "Nightblade",
+        "213416|": "Thermaplugg's Rocket Cleaver",
+        "213296|": "Supercharged Headchopper",
+        "213292|": "Gizmotron Gigachopper",
+        "216506|": "Bloodlight Avenger's Edge",
+        "217302|": "Mograine's Might",
         "9425|": "Pendulum of Doom",
         "6327|": "The Pacifier",
         "10758|": "X'caliboar",
         "1722|": "Thornstone Sledgehammer",
         "6830|": "Bonebiter",
         "7717|": "Ravager",
-        "213296|": "Supercharged Headchopper",
         "870|": "Fiery War Axe",
         "215435|": "Libram of Benediction",
         "209574|": "Discarded Tenets of the Silver Hand",
@@ -415,13 +417,11 @@
         "10705|": "Firwillow Wristbands",
         "209672|": "Black Fingerless Gloves",
         "216680|": "Shilly Mittens",
-        "20098|": "Highlander's Cloth Girdle",
         "217255|": "Crimson Silk Belt",
         "215366|": "Invoker's Cord",
         "209667|": "Gaze Dreamer Leggings",
         "217247|": "Black Mageweave Leggings",
         "4044|": "Aurora Pants",
-        "20095|": "Highlander's Cloth Boots",
         "13100|": "Furen's Boots",
         "209669|": "Twilight Invoker's Shoes",
         "1714|": "Necklace of Calisea",
@@ -2206,7 +2206,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/4",
+                    "PriorityText": "1/5",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Volatile Concoction Belt",
@@ -2218,7 +2218,7 @@
                 },
                 {
                     "Rank": "Best - Healing",
-                    "PriorityText": "2/4",
+                    "PriorityText": "2/5",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Mech-Mender's Sash",
@@ -2230,8 +2230,20 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "3/4",
+                    "PriorityText": "3/5",
                     "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Highlander's Cloth Girdle",
+                    "ItemID": "20098",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "The League of Arathor (Honored) The Defilers (Honored) (Samuel Hawke Rutherford Twing)",
+                    "Slot": "waist"
+                },
+                {
+                    "Rank": "Great",
+                    "PriorityText": "4/5",
+                    "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Deathmage Sash",
                     "ItemID": "217292",
@@ -2242,8 +2254,8 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "4/4",
-                    "PriorityNumber": 4,
+                    "PriorityText": "5/5",
+                    "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Ancient Moss Cinch",
                     "ItemID": "209685",
@@ -2326,7 +2338,7 @@
                 },
                 {
                     "Rank": "Best",
-                    "PriorityText": "1/6",
+                    "PriorityText": "1/7",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Irradiated Boots",
@@ -2338,7 +2350,7 @@
                 },
                 {
                     "Rank": "Alternate",
-                    "PriorityText": "2/6",
+                    "PriorityText": "2/7",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "Hyperconductive Walkers",
@@ -2350,7 +2362,7 @@
                 },
                 {
                     "Rank": "Best - Healing",
-                    "PriorityText": "3/6",
+                    "PriorityText": "3/7",
                     "PriorityNumber": 3,
                     "Phase": "2",
                     "ItemName": "Hyperconductive Sandals",
@@ -2362,7 +2374,7 @@
                 },
                 {
                     "Rank": "Great",
-                    "PriorityText": "4/6",
+                    "PriorityText": "4/7",
                     "PriorityNumber": 4,
                     "Phase": "2",
                     "ItemName": "Extraplanar Spidersilk Boots",
@@ -2374,7 +2386,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "5/6",
+                    "PriorityText": "5/7",
                     "PriorityNumber": 5,
                     "Phase": "2",
                     "ItemName": "Acidic Waders",
@@ -2386,7 +2398,7 @@
                 },
                 {
                     "Rank": "Good",
-                    "PriorityText": "6/6",
+                    "PriorityText": "6/7",
                     "PriorityNumber": 6,
                     "Phase": "2",
                     "ItemName": "Southsea Mojo Boots",
@@ -2394,6 +2406,18 @@
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Southsea Shakedown (Tanaris)",
+                    "Slot": "feet"
+                },
+                {
+                    "Rank": "Good",
+                    "PriorityText": "7/7",
+                    "PriorityNumber": 7,
+                    "Phase": "2",
+                    "ItemName": "Highlander's Cloth Boots",
+                    "ItemID": "20095",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "The League of Arathor (Revered) The Defilers (Revered) (Samuel Hawke Rutherford Twing)",
                     "Slot": "feet"
                 },
                 {
@@ -3779,7 +3803,7 @@
                     "Slot": "back"
                 },
                 {
-                    "Rank": "Best Melee/Ranged",
+                    "Rank": "Best Melee With Master Marksman",
                     "PriorityText": "1/4",
                     "PriorityNumber": 1,
                     "Phase": "2",
@@ -3791,7 +3815,7 @@
                     "Slot": "chest"
                 },
                 {
-                    "Rank": "Best Alternate",
+                    "Rank": "Best Melee With Lion & Ranged",
                     "PriorityText": "2/4",
                     "PriorityNumber": 2,
                     "Phase": "2",
@@ -6632,7 +6656,7 @@
                     "Slot": "wrist"
                 },
                 {
-                    "Rank": "#2 - Near Best",
+                    "Rank": "#2 - Very Good",
                     "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
@@ -6644,7 +6668,7 @@
                     "Slot": "wrist"
                 },
                 {
-                    "Rank": "#2 - Near Best",
+                    "Rank": "#2 - Very Good",
                     "PriorityText": "3/6",
                     "PriorityNumber": 3,
                     "Phase": "2",
@@ -7221,7 +7245,7 @@
                 },
                 {
                     "Rank": "#1 - Best",
-                    "PriorityText": "1/2",
+                    "PriorityText": "1/6",
                     "PriorityNumber": 1,
                     "Phase": "2",
                     "ItemName": "Automatic Crowd Pummeler",
@@ -7232,8 +7256,8 @@
                     "Slot": "two-hand"
                 },
                 {
-                    "Rank": "#2 - Near Best",
-                    "PriorityText": "2/2",
+                    "Rank": "#2 - Very Good",
+                    "PriorityText": "2/6",
                     "PriorityNumber": 2,
                     "Phase": "2",
                     "ItemName": "The Jackhammer",
@@ -7241,6 +7265,54 @@
                     "ItemSuffixKey": "",
                     "ItemBISSuffixID": "",
                     "Source": "Trash Drop - (BoE)(extremely low drop chance) (Uldaman / Auction House)",
+                    "Slot": "two-hand"
+                },
+                {
+                    "Rank": "#3 - Good",
+                    "PriorityText": "3/6",
+                    "PriorityNumber": 3,
+                    "Phase": "2",
+                    "ItemName": "Nightblade",
+                    "ItemID": "1982",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Random World Drop (World Drop / Auction House)",
+                    "Slot": "two-hand"
+                },
+                {
+                    "Rank": "#4 - Good",
+                    "PriorityText": "4/6",
+                    "PriorityNumber": 4,
+                    "Phase": "2",
+                    "ItemName": "Thermaplugg's Rocket Cleaver",
+                    "ItemID": "213416",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Mekgineer Thermaplugg (Gnomeregan)",
+                    "Slot": "two-hand"
+                },
+                {
+                    "Rank": "#5 - Okay",
+                    "PriorityText": "5/6",
+                    "PriorityNumber": 5,
+                    "Phase": "2",
+                    "ItemName": "Supercharged Headchopper",
+                    "ItemID": "213296",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from STX-04/BD (Gnomeregan)",
+                    "Slot": "two-hand"
+                },
+                {
+                    "Rank": "#5 - Okay",
+                    "PriorityText": "6/6",
+                    "PriorityNumber": 6,
+                    "Phase": "2",
+                    "ItemName": "Gizmotron Gigachopper",
+                    "ItemID": "213292",
+                    "ItemSuffixKey": "",
+                    "ItemBISSuffixID": "",
+                    "Source": "Drops from Crowd Pummeler 9-60 (Gnomeregan)",
                     "Slot": "two-hand"
                 },
                 {
